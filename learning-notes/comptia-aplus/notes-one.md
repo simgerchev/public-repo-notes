@@ -1,5 +1,5 @@
 # CompTIA A+ Notes One
-## Laptop Hardware 
+## Laptop Hardware 1.1  
 - Engineered to precise specifications 
     - A challenging repair 
 - Some laptops are easier to fix than others 
@@ -102,7 +102,7 @@
     - Hospital workstations 
     - Warehouses 
     - Manufacturing 
-## Laptop Displays
+## Laptop Displays 1.2 
 ### Portable LCD 
 - Liquid crystal display 
     - Light shines through liquid crystals 
@@ -187,3 +187,138 @@
     - But often still available 
 - Many options for input 
     - Use the best one for the job 
+## Connecting Mobile Devices 1.3  
+- Phones and tablets 
+    - Many different ways to connect 
+- Wired and wireless connectivity 
+    - Standards and options change through the years 
+- Used for synchronization, connectivity, backup, and identification
+    - Sometimes simultaneously 
+### USB 
+- Universal Serial Bus 
+    - High-speed wired communication
+    - Used for charging and data transfers 
+- Micro-USB 
+    - A smaller USB connection 
+    - Common now worldwide 
+- Older devices may use Mini-USB 
+    - Slightly larger 
+### USB-C 
+- 24-pin double-sided USB connector 
+    - Used for both hosts and devices 
+- Acts as a USB 2.0/3.0/3.1/4 connection
+    - Different signals can use the same connector 
+- Can transmit other signals 
+    - DisplayPort 
+    - HDMI 
+    - Thunderbolt 
+### Lightning 
+- Apple proprietary 
+    - 8-pin digital signals 
+    - iPhone and iPad devices 
+- Some advantages over Micro-USB 
+    - Higher power output for phones and tablets 
+    - Can be inserted either way 
+    - Simpler design 
+### Serial interfaces 
+- DB-9 
+    - Also called DE-9 
+- Commonly used for RS-232 signals 
+    - Recommended Standard 232 
+    - An industry standard since 1969
+- Serial communications standard 
+    - Traditionally used for modem connections 
+- Now used as a configuration port 
+    - Switches, routers firewalls, etc
+    - Use a USB to DB-9 converter cable 
+### NFC 
+- Near Field Communication 
+    - Send small amounts of data wirelessly over a limited area 
+- Built into your phone 
+    - Payment systems, transportation, in-person information exchange 
+- Access token, identity "card"
+    - Short range with encryption support 
+### Bluetooth 
+- High speed communication over short distances 
+    - PAN (Personal Area Network) 
+- Connects our mobile devices 
+    - Smartphones 
+    - Tethering 
+    - Headsets and headphones 
+    - Health monitors 
+    - Automobile and phone integration 
+    - Smartwatches 
+    - External speakers 
+### Hotspot 
+- Turn your phone into a WiFi hotspot 
+    - Your own personal wireless router 
+    - Extend the cellular data network to all of your devices 
+- Dependent on phone type and provider 
+    - May require additional charges and data costs 
+## Mobile Device Accessories 1.3  
+### Touch pens 
+- Touchscreen pen / touch screen stylus / capacitive stylus 
+    - Activate the interface without actually touching it 
+- Handwriting 
+    - Note taking, signatures 
+- Precise selection 
+    - Easier to see the screen 
+### Active stylus 
+- Digital stylus 
+    - A more advanced writing tool 
+- The stylus communicates directly to the device 
+    - Pressure sensitivity programmable buttons, etc. 
+- Must be compatible with the tablet 
+    - e.g., Apple iPad uses an Apple Pencil 
+### Drawing pad 
+- Use an active stylus with an external digitizer 
+    - Very precise input
+- Use an active stylus with an external digitizer 
+    - Very precise input 
+- Third-party device 
+    - Support across many operating systems 
+### Trackpad 
+- Replace the mouse 
+    - Useful in tight working areas 
+    - Common on laptops 
+- External options 
+    - Battery powered 
+    - Bluetooth connected 
+- Drag and tap 
+    - Or use multiple finger input for right-clicking, zooming, and window control
+- Enable and disable 
+    - Avoid inadvertent mouse clicks and movements 
+### Headsets 
+- Hands-free audio 
+    - Earphones and microphone 
+- Wired 
+    - USB connections are common on laptops 
+    - Connects to 3.5 mm TRRS (tip-ring-ring-sleeve) connector 
+    - Analog audio jack
+    - iPhone can use Lightning port 
+- Wireless 
+    - Bluetooth headset 
+### Speakers 
+- Mobile audio 
+    - Battery powered 
+- Wireless connection 
+    - Bluetooth link 
+- Stereo sound 
+    - Small package 
+### Camera / webcam 
+- Internal or external 
+    - Commonly external on desktops, internal on laptops/tablets/phones
+- Accessible from multimedia applications, photo utilities, and video conferencing 
+    - Real-time video communication 
+### Docking station 
+- Docking station 
+    - Use external keyboard and mouse 
+    - Extend existing laptop interfaces 
+    - Add additional functionality 
+    - Desktop adapter cards 
+    - Aboid cable issues 
+### Port replicator 
+- Port replicator 
+    - Similar to a docking
+    - Does not commonly have an expansion card option 
+    - Usually connects using USB 
