@@ -1,0 +1,54 @@
+Netzwerk
+----
+-IP-Bereich: String
+-Ports: int[]
+----
++Netzwerk(IP-Bereich: String, Ports: int[]) 
+
+#
+
+Lehrstuhlnetzwerk
+----
+-Lehrstuhl: Lehrstuhl 
+----
++Lehrstuhl(IP-Bereich: String, Ports: int[], Lehrstuhl: Lehrstuhl) 
+
+#
+
+Lehrstuhl 
+----
+-Name: String
+-Dozent: String
+-Raeume: Raum[]
+-Netzwerke: Lehrstuhl[]
+----
++Lehrstuhl(Name: String)
++addLehrstuhlnetzwerk(Lehrstuhlnetzwerk: Lehrstuhlnetzwerk): void
++addRaum(Raum: Raum): void
++removeLehrstuhlnetzwerk(Lehrstuhlnetzwerk: Lehrstuhlnetzwerk): void
++removeRaum(Raum: Raum): void
+
+#
+
+Raum
+----
+-Lehrstuhl: Lehrstuhl
+-Gebaeude: Gebaeude
+----
++Raum(Gebaeude, Raumnummer: int)
++setLehrstuhl(Lehrstuhl: Lehrstuhl) 
++unsetLehrstuhl()
+
+# 
+
+Gebaeude 
+----
+-Adresse: String
+-Bezeichnung: String
+-AnzahlEtagen: int
+-Raeume: Raum[]
+----
++Gebaeude(Adresse: String, Bezeichnung: String, AnzahlEtagen: int, Raeume: Raum[]) 
++addRaum/Raeume(Raum[]): void
+
+

@@ -1,0 +1,31 @@
+
+Aufgabe6
+    Der Speicher ist in vier gleich große Module aufgeteilt und hat insgesamt 8 GiB. Das bedeutet, dass jedes Modul 2 GiB groß ist.
+
+    Die fehlerhafte Speicheradresse ist 163B4F487₁₆. Um herauszufinden, welches Modul betroffen ist, wandeln wir die Adresse in Dezimal um:
+    a 8 GiB insgesamt 8 × 2³⁰ = 8,589,934,592 Bytes umfasst und jedes Modul 2 GiB = 2,147,483,648 Bytes enthält, sind die Adressbereiche der vier Module:
+
+    Baustein 0: 0x000000000 - 0x7FFFFFFF (0 - 2,147,483,647)
+    Baustein 1: 0x80000000 - 0xFFFFFFFF (2,147,483,648 - 4,294,967,295)
+    Baustein 2: 0x100000000 - 0x17FFFFFFF (4,294,967,296 - 6,442,450,943)
+    Baustein 3: 0x180000000 - 0x1FFFFFFFF (6,442,450,944 - 8,589,934,591)
+    Die Adresse 163B4F487₁₆ liegt in der Range von Baustein 2 (zwischen 4,294,967,296 und 6,442,450,943).
+
+    Fazit: Der Baustein 2 ist defekt und muss ausgetauscht werden.
+
+Aufgabe7
+    Das Windows-Geräte-Manager-Fenster zeigt die Speicherbelegung der Onboard-Grafik. Die Speicherbereiche sind:
+
+    00000000 - 07FFFFFF (128 MiB)
+    08000000 - 0FFFFFFF (128 MiB)
+    Diese beiden Bereiche summieren sich auf 256 MiB.
+
+    Antwort: Die Onboard-Grafik benötigt 256 MiB an Arbeitsspeicher.
+
+| asdasd | asdasdas | asdsadasd | 
++--------+----------+-----------+
+|asdasdas|asdasddsa | asdasdas  |
++--------+----------+-----------+
+|asdasdas|sadasd    | sadasd    |
++--------+----------+-----------+
+|asdasdas|asdasd    | asda      | 
