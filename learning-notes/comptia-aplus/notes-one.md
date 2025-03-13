@@ -321,4 +321,49 @@
 - Port replicator 
     - Similar to a docking
     - Does not commonly have an expansion card option 
-    - Usually connects using USB 
+    - Usually connects using USB
+## Cellular Standard 1.4 
+### Cellular networks 
+- Mobile devices
+    - "Cell" phones
+- Seperate land into "cells"
+    - Antenna coverages a cell with certain frequencies
+- 2G networks
+    - GSM - Global System for Mobile Communications
+    - CDMA - Code Division Multiple Access
+- Poor data support
+    - Originally used circuit-switching Minor upgrades for some packet-switching
+### GSM 
+- Global System for Mobile Communications
+    - Mobile networking standard
+- 90% of the market
+    - Originally an EU standard
+    - Worldwide coverage
+- Used by AT&T and T-Mobile in the United States
+    - Move your SIM card (Subscriber Identity Module) from phone to phone
+- Original GSM standard used multiplexing
+    - Everyone gets a little slice of time
+### CDMA 
+- Code Division Multiple Access
+    - Everyone communicates at the same time
+    - Each call uses a different code
+    - The codes are used to filter each call on the receiving side
+- Used by Verizon and Sprint
+    - Handsets are controlled by the network provider
+    - Not much adoption elsewhere
+### 3G technology 
+- 3rd Generation
+    - Introduced in 1998
+- Upgraded data connectivity over 2G
+    - Incremental 3G updates improved speeds
+    - Usually several megabits per second
+- Bandwidth improvement allowed new functionality
+    - GPS
+    - Mobile television
+    - Video on demand
+### 4G and LTE 
+- Long Term Evolution (LTE)
+    - A "4G" technology
+    - Converged standard (GSM and CDMA providers)
+    - Based on GSM and EDGE(Enhanced Data Rates for GSM Evolution)
+    - Standard supports download rates of 150 Mbit/s 
