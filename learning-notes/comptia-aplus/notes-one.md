@@ -366,4 +366,30 @@
     - A "4G" technology
     - Converged standard (GSM and CDMA providers)
     - Based on GSM and EDGE(Enhanced Data Rates for GSM Evolution)
-    - Standard supports download rates of 150 Mbit/s 
+    - Standard supports download rates of 150 Mbit/s
+- LTE Advanced (LTE-A)
+    - Standard supports download rates of 300 Mbit/s
+### 5G 
+- Fifth generation cellular networking
+    - Launched worldwide in 2020
+- Significant performance improvements
+    - At higher frequencies
+    - Eventually 10 gigabits per second
+    - Slower speeds from 100-900 Mbit/s
+- Significant IoT impact
+    - Bandwidth becomes less of a constraint
+    - Larger data transfers
+    - Faster monitoring and notification
+    - Additional cloud processing
+### Updates 
+- PRL updates
+    - Preferred Roaming List
+    - CDMA networks (i.e., Verizon, Sprint)
+-Allows your phone to connect to the right tower
+    - Can be updated over the air (OTA)
+### Hotspot 
+- Turn your phone into a WiFi hotspot
+    - Your own personal wireless router
+    - Extend the cellular data network to all of your devices
+- Dependent on phone type and provider
+    - May require additional charges and data costs
