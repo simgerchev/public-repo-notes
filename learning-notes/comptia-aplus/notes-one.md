@@ -1,4 +1,4 @@
-# CompTIA A+ Notes One
+# CompTIA A+ Notes Part One
 ## Laptop Hardware 1.1  
 - Engineered to precise specifications 
     - A challenging repair 
