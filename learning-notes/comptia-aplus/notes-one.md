@@ -810,3 +810,24 @@
     - Or added as an expansion card
 - Many options
     - Single port, multi-port, copper, fiber
+## Software Defined Networking 2.2 
+- Networking devices have different functional planes of operation
+    - Data, control, and management planes
+- Split the functions into seperate logicla units
+    - Extend the functionality and management of a single device
+    - Perfectly built for the cloud
+- Different Layers
+    - Infrastructure layer / Data plane
+        - Process the network frames and packets
+        - Forwarding, trunking, encrypting, NAT
+    - Control layer / Control plane
+        - Manages the actions of the data plane
+        - Routing tables, session tables, NAT tables
+        - Dynamic routing protocol updates
+    - Application layer / Management plane
+        - Configure and manage the device
+        - SSH, browser, API
+## SDN Data Flows 
+| Application Layer / Management Plane | <------- SSH, SNMP, API            -------> |Application Layer / Management Plane |
+| Control Layer / Control Plane        | <------- Dynamic routing protocols -------> |Control Layer / Control Plane        |
+| Infrastructure Layer / Data Plane    | <------- Network traffic           -------> |Infrastructure Layer / Data Plane    | 
