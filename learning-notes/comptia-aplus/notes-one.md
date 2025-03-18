@@ -828,6 +828,6 @@
         - Configure and manage the device
         - SSH, browser, API
 ## SDN Data Flows 
-| Application Layer / Management Plane | <------- SSH, SNMP, API            -------> |Application Layer / Management Plane |
-| Control Layer / Control Plane        | <------- Dynamic routing protocols -------> |Control Layer / Control Plane        |
-| Infrastructure Layer / Data Plane    | <------- Network traffic           -------> |Infrastructure Layer / Data Plane    | 
+- | Application Layer / Management Plane | <------- SSH, SNMP, API            -------> |Application Layer / Management Plane |
+- | Control Layer / Control Plane        | <------- Dynamic routing protocols -------> |Control Layer / Control Plane        |
+- | Infrastructure Layer / Data Plane    | <------- Network traffic           -------> |Infrastructure Layer / Data Plane    | 
