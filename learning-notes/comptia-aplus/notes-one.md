@@ -900,7 +900,6 @@
     - Works similar to cellular communication
     - Improves high-density installations
 ### 802.11 networking
--
 |          | Frequencies    | Maximum Mimo streams | Maximum theoretical throughput (per stream) | Maximum theoretical throughput (total) |
 |----------|----------------|----------------------|---------------------------------------------|----------------------------------------|
 | 802.11a  | 5 GHz          | Not applicable       | 54 Mbit/s                                   | 54 Mbit/s                              |
