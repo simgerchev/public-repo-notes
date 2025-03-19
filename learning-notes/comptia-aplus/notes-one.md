@@ -948,5 +948,32 @@
     - NFC helps with Bluetooth pairing
 - Access token, identity "card"
     - Short range with encryption support 
-
+## Wireless Network Technologies 2.3 
+### 802.11 technologies 
+- Frequency
+    - 2.4 GHz or 5 GHz
+    - And sometimes both
+- Channels
+    - Groups of frequencies, numbered by the IEEE
+    - Non-overlapping channels would be ideal
+- Regulations
+    - Most countries have regulations to manage frequency use
+    - Spectrum use, power output, interference requirements, etc.
+### Band selection and bandwidth 
+- 2.4 GHz Spectrum for 802.11 - North America
+    - Channels - 1,6,11 
+- 5 GHz Spectrum for 802.11 - North America
+    - Channels - 36, 40, 44, 48, 52, 56, 60, 64 (...)
+    - 20 MHz, 40 MHz, 80 MHz, 160 MHz
+### Bluetooth 
+- Remove the wires
+    - Headsets
+    - Speakers
+    - Keyboards / Mice
+- Uses the 2.4 GHz range
+    - Unlicensed ISM (Industrial, Scientific and Medical) band
+    - Same as 802.11
+- Short-range
+    - Most consumer devices operate to about 10 meters
+    - Industrial Bluetooth devices can communicate over 100 meters 
 
