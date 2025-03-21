@@ -1171,3 +1171,59 @@
     - Domain Name Services
 - You configure **two** DNS servers in your IP configuration
     - That's how important it is
+## Assigning IP Addresses 2.5
+### DHCP 
+- IPv4 address configuration used to be manual
+    - IP address, subnet mask, gateway, DNS servers, NTP servers, etc.
+- October 1993 - The bootstrap protocol
+    - BOOTP
+- BOOTP didn't automatically define everything
+    - Some manual configurations were still required
+    - BOOTP also didn't know when an IP address might be abailable again
+- Dynamic Host Configuration Protocol (DHCP)
+    - Initially released in 1997, updated through the years
+    - Provides automatic address / IP configuration for almost all devices
+### DHCP process 
+- DORA
+    - A four-step process
+- Discover
+    - Find a DHCP server
+- Offer
+    - Get an offer
+- Request
+    - Lock in the offer
+- Acknowledge
+    - DHCP server confirmation
+### Discover
+- The client sends a DHCPDISCOVER message to find available DHCP servers.
+### Offer
+- The DHCP server responds with a DHCPOFFER message, offering an available IP address.
+### Request
+- The client sends a DHCPREQUEST message to accept the offered IP address.
+### Acknowledge
+- The DHCP server sends a DHCPACK message to confirm and finalize the lease.
+### Turning dynamic into static 
+- DHCP assigns an IP address from the first available from a large pool of addresses
+    - Your IP address will occasionally change
+- You may not want your IP address to change
+    - Server, printer, or personal preference
+- Disable DHCP on the device
+    - Configure the IP address information manually
+    - Requires additional administration
+- Better: Configure an IP reservation on the DHCP server
+    - Associate a specific MAC address with an IP address
+### Avoid manual configurations 
+- No DHCP server reservation
+    - You configure the IP address manually
+- Difficult to change later
+    - You must visit the device again
+- A DHCP reservation is preferable
+    - Change the IP address from the DHCP server
+### Automatic Private IP Addressing (APIPA) 
+- A link-local address
+    - No forwarding by routers
+- IETF has reserved 169.254.0.0 through 169.254.255.255
+    - First and last 254 addresses are reserved
+    - Functional block of 169.254.1.0 through 169.254.254.255
+- Automatically assigned
+    - Uses ARP to confirm the address isn't currently in use 
