@@ -1121,3 +1121,49 @@
     - Smart doorbells
 - May require a segmented network
     - Limit any security breaches 
+## IPv4 and IPv6 2.5 
+### IP addressing 
+- IPv4 is the primary protocol for everything we do
+    - Included in almost all configurations
+- IPv6 is now part of all major operating systems
+    - And the backbone of our Internet infrastructure
+### IPv4 addresses 
+- Internet Protocol version 4
+    - OSI Layer 3 address
+| 192      | 168      | 1        | 131      |
+|----------|----------|----------|----------|
+| 11000000 | 10101000 | 00000001 | 10000011 | 
+- 1 octet = 1 byte = 8 bits
+- 32 bits = 4 bytes
+### IPv6 addresses 
+- Internet Protocol v6 - 128-bit address
+    - 340,282,366,920,938,463,463,374,607,431,768,211,456 addresses (340 undecillion)
+    - 6.8 billion people coul have 5,000,000,000,000,000,000,000,000,000
+| fe80             | 0000             | 0000             | 0000             | 5d18             | 0652             | cffd             | 8f52             |
+|------------------|------------------|------------------|------------------|------------------|------------------|------------------|------------------|
+| 1111111010000000 | 0000000000000000 | 0000000000000000 | 0000000000000000 | 0101110100011000 | 0000011001010010 | 1100111111111101 | 1000111101010010 | 
+- 2 octets = 2 bytes = 16 bits
+- 128 bits = 16 bytes
+- Your DNS is very important !
+- First 64 bits is generally the network prefix (/64)
+- Last 64 bits is then the host network address
+### Networking with IPv4 
+- IP Address, e.g., 192.168.1.165
+    - Every device needs a unique IP address
+- Subnet mask, e.g., 255.255.255.0
+    - Used by the local device to determine what subnet it's on
+        - The subnet mask isn't (usually) transmitted across the network
+        - You'll ask for the subnet mask all the time
+            - What's the subnet mask of this network?
+- Default gateway, e.g., 192.168.1.1
+    - The router that allows you to communicate outside of your local subnet
+    - The default gateway must be an IP address on the local subnet
+### DNS server 
+- We remember names
+    - professormesser.com, google.com, youtube.com
+- Internet routers don't know names
+    - Routers only know IP addresses
+- Something has to translate between names and IP addresses
+    - Domain Name Services
+- You configure **two** DNS servers in your IP configuration
+    - That's how important it is
