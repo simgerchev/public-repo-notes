@@ -1227,3 +1227,4 @@
     - Functional block of 169.254.1.0 through 169.254.254.255
 - Automatically assigned
     - Uses ARP to confirm the address isn't currently in use 
+## DNS Configuration 2.6
