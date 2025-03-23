@@ -1362,4 +1362,4 @@ nslookup www.professormesser.com
     - 50% of the lease time (by default)
 - T2 timer
     - If the original DHCP server is down, try rebinding with any DHCP server
-- 87.5% of the lease time (7/8ths) 
+    - 87.5% of the lease time (7/8ths) 
