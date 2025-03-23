@@ -1228,3 +1228,33 @@
 - Automatically assigned
     - Uses ARP to confirm the address isn't currently in use 
 ## DNS Configuration 2.6
+### Domain Name System 
+- Translates human-readable names into computer-readable IP addresses
+    - You only need to remember www.ProfessorMesser.com
+- Hierarchical
+    - Follow the path
+- Distributed database
+    - Many DNS servers
+    - 13 root server clusters (Over 1,000 actual servers)
+    - Hundreds of generic top-level domains (gTLDs) - .com, .org, .net, etc.
+    - Over 275 country code top-level domains (ccTLDs) - .us, .ca, .uk, etc.
+### The DNS hierarchy 
+- . (dot) (Top-Level Domains TLDs) 
+    - .com
+        - .professormesser
+            - www
+            - live
+            - mail
+            - east
+                - trey
+                - katie
+            - west
+                - ethan
+                - judy
+    - .net
+    - .edu
+    - .org
+### DNS lookup 
+'''
+da
+'''
