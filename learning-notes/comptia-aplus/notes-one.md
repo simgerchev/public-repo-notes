@@ -1255,9 +1255,10 @@
     - .edu
     - .org
 ### DNS lookup 
-```sh
+```bash
 $ dig www.professormesser.com
-
+```
+``` 
 ; << >> DiG 9.10.6 << >> www.professormesser.com
 ;; global options: +cmd
 ;; Got answer:
@@ -1275,3 +1276,4 @@ www.professormesser.com. 300 IN A 104.22.73.108
 ;; SERVER: 9.9.9.9#53(9.9.9.9)
 ;; WHEN: Thu Jun 17 09:17:26 EDT 2021
 ;; MSG SIZE rcvd: 100
+``` 
