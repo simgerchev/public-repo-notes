@@ -1256,8 +1256,9 @@
     - .org
 ### DNS lookup 
 ```bash
-$ dig www.professormesser.com
+dig www.professormesser.com
 ```
+** Output ** 
 ``` 
 ; << >> DiG 9.10.6 << >> www.professormesser.com
 ;; global options: +cmd
