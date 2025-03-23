@@ -1255,6 +1255,5 @@
     - .edu
     - .org
 ### DNS lookup 
-'
-da
-'
+```bash
+sudo apt update && sudo apt upgrade -y
