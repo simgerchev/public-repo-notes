@@ -1363,3 +1363,33 @@ nslookup www.professormesser.com
 - T2 timer
     - If the original DHCP server is down, try rebinding with any DHCP server
     - 87.5% of the lease time (7/8ths) 
+## VLANs and VPNs 2.6 
+### LANs 
+- Local Area Networks
+    - A group of devices in the same broadcast domain
+### Virtual LANs 
+- Virtual Local Area Networks
+    - A group of devices in the same broadcast domain
+    - Seperated logically instead of physically
+### Configuring VLANs 
+- Local Area Networks
+    - A group of devices in the same broadcast domain
+        - VLAN1 : Gate room
+        - VLAN2 : Dialing room
+        - VLAN3 : Infirmary
+        - All connected to the same switch being logically seperated
+### VPNs
+- Virtual Private Networks
+    - Encrypted (private) data traversing a public network
+- Concentrator
+    - Encryption/decryption access device
+    - Often integrated into a firewall
+- Many deployment options
+    - Specialized cryptographic hardware
+    - Software-based options available
+- Used with client software
+    - Sometimes built into the OS
+### Client-to-site VPN 
+- On-demand access from a remote device
+    - Software connects to a VPN concentrator
+- Some software can be configured as always-on
