@@ -1256,4 +1256,23 @@
     - .org
 ### DNS lookup 
 ```bash
-sudo apt update && sudo apt upgrade -y
+dig www.professormesser.com
+**Output:**  
+```bash
+; << >> DiG 9.10.6 << >> www.professormesser.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER <<- opcode: QUERY, status: NOERROR, id: 58050
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags :; udp: 512
+;; QUESTION SECTION:
+;www.professormesser.com. IN A
+;; ANSWER SECTION:
+www.professormesser.com. 300 IN A 104.22.72.108
+www.professormesser.com. 300 IN A 172.67.41.114
+www.professormesser.com. 300 IN A 104.22.73.108
+;; Query time: 42 msec
+;; SERVER: 9.9.9.9#53(9.9.9.9)
+;; WHEN: Thu Jun 17 09:17:26 EDT 2021
+;; MSG SIZE rcvd: 100
