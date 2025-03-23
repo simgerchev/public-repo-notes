@@ -1257,24 +1257,53 @@
 ### DNS lookup 
 ```bash
 dig www.professormesser.com
+``` 
+or 
+```powershell
+nslookup www.professormesser.com
 ```
-** Output ** 
-``` 
-; << >> DiG 9.10.6 << >> www.professormesser.com
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER <<- opcode: QUERY, status: NOERROR, id: 58050
-;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags :; udp: 512
-;; QUESTION SECTION:
-;www.professormesser.com. IN A
-;; ANSWER SECTION:
-www.professormesser.com. 300 IN A 104.22.72.108
-www.professormesser.com. 300 IN A 172.67.41.114
-www.professormesser.com. 300 IN A 104.22.73.108
-;; Query time: 42 msec
-;; SERVER: 9.9.9.9#53(9.9.9.9)
-;; WHEN: Thu Jun 17 09:17:26 EDT 2021
-;; MSG SIZE rcvd: 100
-``` 
+### DNS records 
+- Resource Records (RR)
+    - The database records of domain name services
+- Over 30 record types
+    - IP addresses, certificates, host alias names, etc.
+- These are important and critical configurations
+    - Make sure to check your settings, backup, and test!
+### DNS configuration 
+- You can edit either a txt file with the config or the GUI in the browser 
+### Address records (A) (AAAA) 
+- Defines the IP address of a host
+    - This is the most popular query
+- A records are for IPv4 addresses
+    - Modify the A record to change the host name to IP address resolution
+- AAAA records are for IPv6 addresses
+    - The same DNS server, different records
+- www.professormesser.com. IN A 162.159.246.164 ; Professor Messer
+### Mail exchanger record (MX) 
+- Determines the host name for the mail server
+    - This isn't an IP address; it's a name
+### Text records (TXT) 
+- Human-readable text information
+    - Useful public information
+    - Was originally designed for informal information
+- Can be used for verification purposes
+    - If you have access to the DNS, then you must be the administrator of the domain name
+- Commonly used for email security
+    - External email servers validate information from your DNS
+### Sender Policy Framework (SPF) 
+- SPF protocol
+    - A list of all servers authorized to send emails for this domain
+    - Prevent mail spoofing
+    - Mail servers perform a check to see if incofming mail really did come from an authorized host
+### Domain Keys Identified Mail (DKIM) 
+- Digitally sign a dommain's outgoing mail
+    - Validated by mail servers, not usually seen by the end user
+    - The public key is in the DKIM TXT record
+### DMARC 
+- Domain-based Message Authentication, Reporting, and Conformance (DMARC)
+    - Prevent unauthorized email use (spoofing)
+    - An extension of SPF and DKIM
+- You decide what external email servers should do with emails that don't validate through SPF or DKIM
+    - That policy is written into a DMARC TXT record
+    - Accept all, send to spam, or reject the email
+    - Compliance reports can be sent to the email administrator
