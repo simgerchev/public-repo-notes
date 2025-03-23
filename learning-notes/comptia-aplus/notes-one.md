@@ -1255,10 +1255,9 @@
     - .edu
     - .org
 ### DNS lookup 
-```bash
-dig www.professormesser.com
-**Output:**  
-```bash
+```sh
+$ dig www.professormesser.com
+
 ; << >> DiG 9.10.6 << >> www.professormesser.com
 ;; global options: +cmd
 ;; Got answer:
