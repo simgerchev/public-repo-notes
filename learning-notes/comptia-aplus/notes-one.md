@@ -1651,3 +1651,23 @@ nslookup www.professormesser.com
     - Provides grounding
     - Adds strength
     - Protects against signal interference 
+## Optical Fiber 3.1 
+### Fiber communication 
+- Transmission by light
+    - The bisible spectrum
+- No RF signal
+    - Very difficult to monitor or tap
+- Signal slow to degrade
+    - Transmission over long distances
+- Immunue to radio interference
+    - There's no RF
+### Multimode fiber 
+- Short-range communication
+    - Up to 2km
+- Relatively inexpensive light source
+    - t.e., LED
+### Single-mode fiber 
+- Long-range communication
+    - Up to 100km without processing
+- Expensive light source
+    - Commonly uses lasers 
