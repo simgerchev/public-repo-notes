@@ -1505,4 +1505,8 @@ nslookup www.professormesser.com
     - In a limited geographical area
 - Expand coverage with additional access points
     - Downtown area
-    - Large campus 
+    - Large campus
+## Network Tools 2.8 
+### Cable cripmers 
+- "Pinch" the connector onto a wire
+    - Coaxial, twisted pair, fiber 
