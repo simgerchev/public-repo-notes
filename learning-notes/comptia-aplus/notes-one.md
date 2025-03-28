@@ -1769,9 +1769,9 @@ nslookup www.professormesser.com
 |USB 3.2 Name|USB 3.1 Name|USB 3.0 Name|Marketing Name|Maximum Speed|
 |---|---|---|---|---|
 |USB 3.2 Gen 1|USB 3.1 Gen 1|3.0|SuperSpeed USB 5Gbps|5 Gbit/sec| 
-|USB 3.2 Gen 2|USB 3.1 Gen 2|-|SuperSpeed USB 10Gbps|10 Gbit/sec| 
-|USB 3.2 Gen 1|-|-|-|10 Gbit/sec| 
-|USB 3.2 Gen 1|-|-|SuperSpeed USB 20Gbps|20 Gbit/sec| 
+|USB 3.2 Gen 2|USB 3.1 Gen 2||SuperSpeed USB 10Gbps|10 Gbit/sec| 
+|USB 3.2 Gen 1||||10 Gbit/sec| 
+|USB 3.2 Gen 1|||SuperSpeed USB 20Gbps|20 Gbit/sec| 
 ### Thunderbolt 
 - High-speed serial connector
     - Data and power on the same cable
