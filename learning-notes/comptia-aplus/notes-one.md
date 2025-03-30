@@ -1801,3 +1801,59 @@ nslookup www.professormesser.com
 - Serial communications standard
     - Built for modem communication
     - Used for modems, printers, mice, networking 
+## Video Cables 3.1 
+### VGA (Video Graphics Array) 
+- DB-15 connector
+    - More accurately called DE-15
+- Blue color
+    - PC System Design Guide
+- Video only
+    - No audio signal
+- Analog signal
+    - No digital
+    - Image degrades after 5 to 10 meters
+### HDMI (High-Definition Multimedia Interface) 
+- Video and audio stream
+    - All digital, no analog
+    - ~20 meter distance before losing too much signal
+- 19-pin (Type A) connector
+    - Proprietary connector
+### DisplayPort 
+- Digital information sent in packetized form
+    - Like Ethernet and PCI Express
+    - Carries both audio and video
+- Compatible with HDMI and DVI
+    - Passive adapter
+    - DisplayPort -> HDMI
+    - DisplayPort -> DVI
+### DVI (Digital Visual Interface) 
+- Single and dual link video
+    - Single link; 3.7 Gbps (HDTV at 60fps)
+    - Dual link; 7.4 Gbps (HDTV at 85 fps)
+    - No audio support
+- DVI-A
+    - Analog signals (waves) 
+- DVI-D
+    - Digital signals (zeros or ones)
+- DVI-I
+    - Integrated
+    - Digital and analog in the same connector
+## SATA Device Cables 3.1 
+### SATA (Serial AT Attachment) 
+- SATA Revision 1.0
+    - SATA 1.5 Gbit/s, 1 meter
+- SATA Revision 2.0
+    - SATA 3.0 Gbit/s, 1 meter
+- SATA Revision 3.0
+    - SATA 6.0 Gbit/s, 1 meter
+- SATA Revision 3.2
+    - SATA 16 Gbit/s, 1 meter
+- eSATA (external SATA) 
+    - Matches the SATA version
+    - 2 meters
+- One cable for power, one cable for data transfer
+### eSATA cable 
+- External device connections
+    - Uses the SATA standard
+- Similar in size to SATA
+    - Connectors are physically different 
