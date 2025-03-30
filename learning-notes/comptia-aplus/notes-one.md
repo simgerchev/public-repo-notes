@@ -1848,7 +1848,7 @@ nslookup www.professormesser.com
     - SATA 6.0 Gbit/s, 1 meter
 - SATA Revision 3.2
     - SATA 16 Gbit/s, 1 meter
-- eSATA (external SATA) 
+- eSATA (external SATA)
     - Matches the SATA version
     - 2 meters
 - One cable for power, one cable for data transfer
@@ -1856,4 +1856,5 @@ nslookup www.professormesser.com
 - External device connections
     - Uses the SATA standard
 - Similar in size to SATA
-    - Connectors are physically different 
+    - Connectors are physically different
+## SCSI Device Cables 3.1 
