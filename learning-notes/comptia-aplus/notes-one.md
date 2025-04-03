@@ -1857,4 +1857,4 @@ nslookup www.professormesser.com
     - Uses the SATA standard
 - Similar in size to SATA
     - Connectors are physically different
-## SCSI Device Cables 3.1 
+## SCSI Device Cables 3.1 //
