@@ -277,12 +277,38 @@ DHCPv4 (Dynamic Host Configuration Protocol for IPv4) weist automatisch:
 
 ---
 
-### Ablauf (DORA-Prozess):
+### DORA-Prozess (DHCP)
 
-1. **Discover:** Client sendet DHCPDISCOVER (Broadcast)
-2. **Offer:** Server bietet eine IP-Adresse an (DHCPOFFER)
-3. **Request:** Client nimmt Angebot an (DHCPREQUEST)
-4. **Acknowledge:** Server bestätigt (DHCPACK)
+Der DORA-Prozess beschreibt den Ablauf, wie ein Client über das **Dynamic Host Configuration Protocol (DHCP)** eine IP-Adresse vom Server erhält. Der Prozess besteht aus vier Hauptschritten:
+
+1. **Discover (DHCPDISCOVER)**
+   - **Was passiert?**  
+     Der Client (z.B. ein Computer oder Smartphone) sendet eine **DHCPDISCOVER-Nachricht** als **Broadcast** an alle Geräte im Netzwerk (IP-Adresse 255.255.255.255), um nach einem DHCP-Server zu suchen. Zu diesem Zeitpunkt hat der Client noch keine IP-Adresse.
+   - **Ziel:**  
+     Der Client sucht nach einem verfügbaren DHCP-Server, der ihm eine IP-Adresse anbieten kann.
+
+2. **Offer (DHCPOFFER)**
+   - **Was passiert?**  
+     Ein DHCP-Server empfängt die DHCPDISCOVER-Nachricht und prüft, ob er freie IP-Adressen zur Verfügung hat. Der Server sendet dann eine **DHCPOFFER-Nachricht**, die eine vorgeschlagene IP-Adresse sowie Netzwerkinformationen (z.B. Subnetzmaske, Lease-Dauer) enthält.
+   - **Ziel:**  
+     Der Server bietet dem Client eine IP-Adresse und relevante Netzwerkinformationen an.
+
+3. **Request (DHCPREQUEST)**
+   - **Was passiert?**  
+     Der Client empfängt eine oder mehrere DHCPOFFER-Nachrichten und wählt eines der Angebote aus. Der Client sendet eine **DHCPREQUEST-Nachricht** zurück an den Server, um das Angebot zu akzeptieren. Diese Nachricht bestätigt die gewählte IP-Adresse.
+   - **Ziel:**  
+     Der Client bestätigt, dass er die vom Server angebotene IP-Adresse annehmen möchte.
+
+4. **Acknowledge (DHCPACK)**
+   - **Was passiert?**  
+     Der Server empfängt die DHCPREQUEST-Nachricht und sendet eine **DHCPACK-Nachricht** zurück, um die Zuweisung der IP-Adresse zu bestätigen. Der Server reserviert die IP-Adresse für den Client und sendet eine Bestätigung, dass der Client nun eine gültige IP-Adresse hat.
+   - **Ziel:**  
+     Der Server bestätigt, dass der Client die IP-Adresse erfolgreich erhalten hat und diese für die angegebene Lease-Dauer gültig ist.
+
+---
+
+Dieser Ablauf ermöglicht es Geräten im Netzwerk, automatisch eine IP-Adresse zu erhalten, ohne dass eine manuelle Konfiguration erforderlich ist.
+
 
 ---
 
