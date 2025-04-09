@@ -199,6 +199,11 @@ Die Subnetze im Bereich `/55` gehen von `2001:db8:1234:0000::/55` bis `2001:db8:
 **Vollständige IPv6-Adresse:**  
 `2001:db8:1234:0002:0225:96ff:fe12:3456`
 
+#### 4.Unterschiede zwischen stateful und stateless Adresskonfiguration in IPv6:
+
+1. Stateful (wie DHCPv6): Der Server verfolgt alle zugewiesenen IP-Adressen und verwaltet sie zentral.
+2. Stateless (wie SLAAC): Der Client konfiguriert seine eigene Adresse basierend auf dem Präfix des Routers.
+  
 ---
 
 ### Arten von IPv6 Adressen
