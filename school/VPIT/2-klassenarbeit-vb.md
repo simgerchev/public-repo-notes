@@ -15,6 +15,10 @@
 - **Darstellung:**  
   Die Adresse wird als **Hexadezimalzahl** dargestellt und durch **Doppelpunkte** `:` getrennt. Zum Beispiel:  
   - `2001:0db8:0000:0000:0000:ff00:0042:8329`
+- **Aufbau Komponente**
+  IPv6-Adressen haben oft eine bestimmte Struktur, z. B.:
+  - **Präfix (Netz-ID)** – z. B. die ersten 64 Bit
+  - **Interface Identifier (Host-ID)** – die letzten 64 Bit
 
 #### Beispiel (voll ausgeschrieben):  
 `2001:0db8:0000:0000:0000:ff00:0042:8329`
