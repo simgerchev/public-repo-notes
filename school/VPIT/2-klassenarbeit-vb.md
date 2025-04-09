@@ -280,3 +280,44 @@ Die Subnetze im Bereich `/55` gehen von `2001:db8:1234:0000::/55` bis `2001:db8:
 - **Link-Local** = Nur im lokalen Netz gültig
 - **ULA** = Private IPv6-Adressen
 
+---
+
+## 7. DHCPv4 – Zusammenfassung
+
+### Was ist DHCPv4?
+
+DHCPv4 (Dynamic Host Configuration Protocol for IPv4) weist automatisch:
+
+- IPv4-Adressen
+- Standardgateway
+- DNS-Server
+
+zu.
+
+---
+
+### Ablauf (DORA-Prozess):
+
+1. **Discover:** Client sendet DHCPDISCOVER (Broadcast)
+2. **Offer:** Server bietet eine IP-Adresse an (DHCPOFFER)
+3. **Request:** Client nimmt Angebot an (DHCPREQUEST)
+4. **Acknowledge:** Server bestätigt (DHCPACK)
+
+---
+
+### Weitere Infos:
+
+- **Lease Time:** Dauer der Zuweisung
+- **Erneuerung:** Vor Ablauf wird Adresse erneuert
+- **Fallback:** Wenn kein Server → APIPA-Adresse (`169.254.x.x`)
+
+---
+
+### Beispiel aus dem Alltag:
+
+Laptop verbindet sich mit WLAN → DHCP weist automatisch IP zu → Verbindung steht.
+
+---
+
+
+
