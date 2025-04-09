@@ -19,6 +19,18 @@
   IPv6-Adressen haben oft eine bestimmte Struktur, z. B.:
   - **Präfix (Netz-ID)** – z. B. die ersten 64 Bit
   - **Interface Identifier (Host-ID)** – die letzten 64 Bit
+- **Arten von Praefixe**
+
+  | IPv6-Präfix        | Präfix-Länge | Bedeutung                        | Verwendung                            |
+  |--------------------|--------------|----------------------------------|----------------------------------------|
+  | `2000::/3`         | /3           | Global Unicast                   | Öffentlich routbare Adressen (Internet) |
+  | `fc00::/7`         | /7           | Unique Local Address (ULA)       | Private Netzwerke, vergleichbar mit IPv4-Private-IPs |
+  | `fe80::/10`        | /10          | Link-Local                       | Nur lokal gültig (z. B. Nachbarn im LAN) |
+  | `ff00::/8`         | /8           | Multicast                        | Kommunikation mit mehreren Empfängern gleichzeitig |
+  | `::1/128`          | /128         | Loopback                         | Lokale Rückschleife (localhost)       |
+  | `::/128`           | /128         | Unspecified                      | "Keine Adresse zugewiesen" – z. B. beim Start eines Geräts |
+  | `2001:db8::/32`    | /32          | Dokumentation / Testnetzwerke    | Offiziell reserviert für Beispiele    |
+
 
 #### Beispiel (voll ausgeschrieben):  
 `2001:0db8:0000:0000:0000:ff00:0042:8329`
