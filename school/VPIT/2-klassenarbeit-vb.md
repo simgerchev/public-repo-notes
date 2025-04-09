@@ -280,12 +280,3 @@ Die Subnetze im Bereich `/55` gehen von `2001:db8:1234:0000::/55` bis `2001:db8:
 - **Link-Local** = Nur im lokalen Netz gültig
 - **ULA** = Private IPv6-Adressen
 
-## Zusammenfassung (ALLES) 
-
-| Teilaufgabe              | Ergebnis                                       |
-|--------------------------|------------------------------------------------|
-| Benötigte Bits           | 7 Bits → ergibt Präfix `/55`                   |
-| Subnetz 0                | `2001:db8:1234:0000::/64`                      |
-| Subnetz 1                | `2001:db8:1234:0001::/64`                      |
-| Subnetz 127              | `2001:db8:1234:007f::/64`                      |
-| Beispielgerät Subnetz 2  | `2001:db8:1234:0002:0225:96ff:fe12:3456`       |
