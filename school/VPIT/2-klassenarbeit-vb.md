@@ -264,7 +264,7 @@ Die Subnetze im Bereich `/55` gehen von `2001:db8:1234:0000::/55` bis `2001:db8:
 
 ---
 
-## 7. DHCPv4 – Zusammenfassung
+## 4. DHCPv4 – Zusammenfassung
 
 ### Was ist DHCPv4?
 
@@ -274,7 +274,6 @@ DHCPv4 (Dynamic Host Configuration Protocol for IPv4) weist automatisch:
 - Standardgateway
 - DNS-Server
 
-zu.
 
 ---
 
