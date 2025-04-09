@@ -1,3 +1,4 @@
+
 # Vorbereitung auf die 2. Klassenarbeit (IPv6)
 
 ---
@@ -149,30 +150,11 @@ Wenn der Router das Präfix `2001:db8:abcd:1::/64` bekannt gibt, ergibt sich dur
 
 ---
 
-### Vollständige SLAAC-Adresse
-
-Wenn der Router das Präfix `2001:db8:abcd:1::/64` bekannt gibt, ergibt sich durch SLAAC folgende vollständige IPv6-Adresse:
-
-```
-2001:db8:abcd:1:0225:96ff:fe12:3456
-```
-
-
-### Zusammenfassung
-
-1. **Prefix vom Router:** `2001:db8:abcd:1::/64`
-2. **MAC-Adresse:** `00:1A:2B:3C:4D:5E`
-3. **Teilen und Einfügen von `FF:FE`:** `00:1A:2B:FF:FE:3C:4D:5E`
-4. **Invertieren des 7. Bits (U/L-Bit):** `02:1A:2B:FF:FE:3C:4D:5E`
-5. **Interface-ID:** `021A:2BFF:FE3C:4D5E`
-6. **Vollständige IPv6-Adresse:** `2001:db8:abcd:1:021A:2BFF:FE3C:4D5E`
-
 ### Vorteile von SLAAC:
 
 - **Kein DHCP-Server** erforderlich.
 - Geräte können ihre IPv6-Adressen **selbstständig** generieren.
 - **Automatische Netzwerkkonfiguration** ohne zusätzliche Server-Ressourcen.
-
 
 ---
 
@@ -318,6 +300,3 @@ zu.
 Laptop verbindet sich mit WLAN → DHCP weist automatisch IP zu → Verbindung steht.
 
 ---
-
-
-
