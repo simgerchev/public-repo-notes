@@ -1,4 +1,3 @@
-
 # Vorbereitung auf die 2. Klassenarbeit (IPv6)
 
 ---
@@ -8,52 +7,19 @@
 ### Struktur einer IPv6-Adresse
 
 - **Länge:**  
-  Eine IPv6-Adresse hat eine Länge von 128 Bit. Das bedeutet, dass eine vollständige IPv6-Adresse 128 binäre Zahlen (Bits) enthält.
-
-- **Aufteilung:**  
-  Diese 128 Bits sind in **8 Blöcke** zu je **16 Bit** unterteilt. Jeder Block ist eine Gruppe von 4 Hexadezimalziffern (also insgesamt 32 Hexadezimalzeichen für eine vollständige IPv6-Adresse).
+  Eine IPv6-Adresse ist 128 Bit lang, bestehend aus 8 Blöcken zu je 16 Bit.
 
 - **Darstellung:**  
-  Die Adresse wird als **Hexadezimalzahl** dargestellt und durch **Doppelpunkte** `:` getrennt. Zum Beispiel:  
-  - `2001:0db8:0000:0000:0000:ff00:0042:8329`
-- **Aufbau Komponente:**
-  IPv6-Adressen haben oft eine bestimmte Struktur, z. B.:
-  - **Präfix (Netz-ID)** – z. B. die ersten 64 Bit
-  - **Interface Identifier (Host-ID)** – die letzten 64 Bit
-- **Arten von Praefixe**
+  Jeder 16-Bit-Block wird in Hexadezimal dargestellt und durch Doppelpunkte `:` getrennt.  
+  Beispiel: `2001:0db8:0000:0000:0000:ff00:0042:8329`
 
-  | IPv6-Präfix        | Präfix-Länge | Bedeutung                        | Verwendung                            |
-  |--------------------|--------------|----------------------------------|----------------------------------------|
-  | `2000::/3`         | /3           | Global Unicast                   | Öffentlich routbare Adressen (Internet) |
-  | `fc00::/7`         | /7           | Unique Local Address (ULA)       | Private Netzwerke, vergleichbar mit IPv4-Private-IPs |
-  | `fe80::/10`        | /10          | Link-Local                       | Nur lokal gültig (z. B. Nachbarn im LAN) |
-  | `ff00::/8`         | /8           | Multicast                        | Kommunikation mit mehreren Empfängern gleichzeitig |
-  | `::1/128`          | /128         | Loopback                         | Lokale Rückschleife (localhost)       |
-  | `::/128`           | /128         | Unspecified                      | "Keine Adresse zugewiesen" – z. B. beim Start eines Geräts |
-  | `2001:db8::/32`    | /32          | Dokumentation / Testnetzwerke    | Offiziell reserviert für Beispiele    |
-
-
-#### Beispiel (voll ausgeschrieben):  
-`2001:0db8:0000:0000:0000:ff00:0042:8329`
-
-- Der Adressraum ist durch die Hexadezimaldarstellung kompakter und lesbarer, da 16 Bits pro Block auf eine Hexadezimalzahl (2 Hexadezimalziffern) abgebildet werden.
-
-  Zum Beispiel:  
-  - `2001:0db8:0000:0000:0000:ff00:0042:8329`  
-  wird zu  
-  - `2001:db8:0:0:0:ff00:42:8329`.
-
-#### Verkürzungsregeln für IPv6-Adressen
+### Verkürzungsregeln für IPv6-Adressen
 
 1. **Führende Nullen weglassen:**  
-   - Beispiel: `0042` wird zu `42`.
-  
-2. **Längste Null-Blöcke mit `::` ersetzen:**  
-   - Ein Block von aufeinander folgenden Nullen kann durch `::` ersetzt werden. Dies darf **nur einmal** pro Adresse erfolgen, da sonst die genaue Position der Nullen nicht mehr erkennbar wäre.
-     - Beispiel:  
-       `2001:0db8:0000:0000:0000:0000:0000:0001`  
-       wird zu  
-       `2001:db8::1`.
+   `0042` → `42`
+
+2. **Längste zusammenhängende Null-Blöcke mit `::` ersetzen (nur einmal pro Adresse):**  
+   `2001:0db8:0000:0000:0000:0000:0000:0001` → `2001:db8::1`
 
 ---
 
@@ -61,14 +27,9 @@
 
 ### Aufbau einer IPv6-Adresse
 
-1. **Globales Präfix**  
-   Dies ist der Teil der Adresse, der den globalen Bereich beschreibt, z.B. `2001::/3`. Dies bedeutet, dass die ersten 3 Bits der Adresse festgelegt sind und die restlichen Bits für das Subnetz und die Interface-ID verwendet werden.
-
-2. **Subnetz-ID**  
-   Die Subnetz-ID beschreibt den spezifischen Bereich innerhalb des globalen Adressraums, der einem bestimmten Netzwerk zugewiesen ist. Dies ist typischerweise der zweite Teil der IPv6-Adresse. 
-
-3. **Interface-ID**  
-   Die Interface-ID ist der spezifische Teil einer Adresse, der einem einzelnen Gerät innerhalb des Netzwerks zugeordnet ist. Diese ID ist in der Regel 64 Bit lang und kann aus der MAC-Adresse des Geräts generiert werden.
+1. **Globales Präfix** (z. B. `2001::/3`) – identifiziert den Adressbereich.
+2. **Subnetz-ID** – beschreibt ein bestimmtes Subnetz.
+3. **Interface-ID** – identifiziert das Gerät im Subnetz (meist 64 Bit).
 
 ---
 
@@ -78,23 +39,19 @@
 `2001:0db8:1234::/48`
 
 - **Subnetzbedarf:**  
-  Um **100 Subnetze** zu erstellen, benötigen wir mindestens **7 zusätzliche Bits**, weil `2^7 = 128` Subnetze möglich sind. (100 Subnetze benötigen also 7 Bits, da `2^7` für mehr als genug Subnetze sorgt).  
-  Dies führt zu einem neuen Präfix von **/55**.
+  Für 100 Subnetze werden mindestens 7 Bits benötigt, da `2^7 = 128`.
 
-#### Subnetzadressen:
+- **Neuer Präfix:** `/48 + 7 = /55`
+
+#### Subnetzadressen (Beispiele):
 
 | Subnetz-Nr | Adresse                  |
 |------------|---------------------------|
-| 0          | `2001:db8:1234:0000::/64` |
-| 1          | `2001:db8:1234:0001::/64` |
-| 2          | `2001:db8:1234:0002::/64` |
+| 0          | `2001:db8:1234:0000::/55` |
+| 1          | `2001:db8:1234:0020::/55` |
+| 2          | `2001:db8:1234:0040::/55` |
 | ...        | ...                       |
-| 127        | `2001:db8:1234:007f::/64` |
-
-### Erklärung:
-- **Subnetzbedarf:** Um 100 Subnetze zu erstellen, sind **7 Bits** erforderlich, da `2^7 = 128` Subnetze möglich sind, was für 100 Subnetze mehr als ausreichend ist.
-- Daher ergibt sich ein neuer Präfix von **/55** (also `/48 + 7` = `/55`).
-- Die Subnetze werden fortlaufend von `2001:db8:1234:0000::/64` bis `2001:db8:1234:007f::/64` reichen.
+| 127        | `2001:db8:1234:00fe::/55` |
 
 ---
 
@@ -102,174 +59,103 @@
 
 ### Was ist SLAAC?
 
-- **SLAAC** (Stateless Address Autoconfiguration) ermöglicht es einem Gerät, seine IPv6-Adresse **selbstständig** zu generieren – **ohne** DHCP-Server.
-  
-  **Bestandteile von SLAAC:**
-  1. **Prefix vom Router** → z. B. `2001:db8:abcd:1::/64`
-  2. **Interface-ID** → automatisch generiert (z. B. über MAC-Adresse mit **EUI-64**)
-
----
+- SLAAC (Stateless Address Autoconfiguration) erlaubt Geräten, ihre IPv6-Adresse selbst zu konfigurieren – **ohne DHCPv6-Server**.
+- Die Adresse setzt sich zusammen aus:
+  1. **Prefix vom Router** (z. B. `2001:db8:abcd:1::/64`)
+  2. **Interface-ID**, erzeugt aus der MAC-Adresse (via EUI-64) oder zufällig.
 
 ### EUI-64-Verfahren zur Interface-ID-Erzeugung
 
-1. **MAC-Adresse (Beispielgerät):**
-   ```
-   00:25:96:12:34:56
-   ```
+**Gegeben: MAC-Adresse `00:25:96:12:34:56`**
 
-2. **Teilen der MAC-Adresse in zwei Hälften:**
-   ```
-   Erste Hälfte: 00:25:96  
-   Zweite Hälfte: 12:34:56
-   ```
+1. Aufteilen in zwei Hälften:  
+   - `00:25:96` und `12:34:56`
 
-3. **Einfügen von `FF:FE` in der Mitte:**
-   ```
-   00:25:96:FF:FE:12:34:56
-   ```
+2. Einfügen von `FF:FE`:  
+   - `00:25:96:FF:FE:12:34:56`
 
-4. **Invertieren des 7. Bits im ersten Byte (U/L-Bit):**
-   - Erstes Byte: `00` = `00000000` (binär)  
-   - 7. Bit invertieren → ergibt: `00000010` = `02`
-   - Neue erste Byte: `02`
+3. Invertieren des 7. Bits (U/L-Bit) des ersten Bytes:  
+   - `00` → `02`
 
-   → Ergebnis:  
-   ```
-   Interface-ID: 0225:96ff:fe12:3456
-   ```
+4. **Interface-ID:** `0225:96ff:fe12:3456`
+
+5. **Vollständige IPv6-Adresse (mit Prefix):**  
+   `2001:db8:abcd:1:0225:96ff:fe12:3456`
 
 ---
 
-### Vollständige SLAAC-Adresse
+## 4. Beispielaufgabe: IPv6 Subnetting + Interface-ID
 
-Wenn der Router das Präfix `2001:db8:abcd:1::/64` bekannt gibt, ergibt sich durch SLAAC folgende vollständige IPv6-Adresse:
+### Aufgabenstellung
 
-```
-2001:db8:abcd:1:0225:96ff:fe12:3456
-```
+- Ausgangspräfix: `/48`
+- Gewünschte Subnetze: 100
+- Benötigte Bits: `log2(100) ≈ 7`
+- Neuer Präfix: `/55`
 
----
-
-### Vorteile von SLAAC:
-
-- **Kein DHCP-Server** erforderlich.
-- Geräte können ihre IPv6-Adressen **selbstständig** generieren.
-- **Automatische Netzwerkkonfiguration** ohne zusätzliche Server-Ressourcen.
-
----
-
-### Beispielaufgabe: IPv6 Subnetting
-
-#### 1. Anzahl benötigter Bits berechnen
-
-- Aktueller Präfix: `/48`
-- Benötigte Subnetze: **100** → log₂(100) ≈ 6,64 → **7 Bits** erforderlich.
-- Neuer Präfix: `/48 + 7 = /55`
-  
-  **Subnetze im /55-Bereich:**  
-  `2^7 = 128` → ausreichend für 100 Subnetze.
-
-#### 2. Subnetz-Adressen berechnen
-
-Die Subnetze im Bereich `/55` gehen von `2001:db8:1234:0000::/55` bis `2001:db8:1234:007f::/55`.
+### Subnetze (Bereich):
 
 | Subnetz-Nr | Adresse                  |
 |------------|---------------------------|
 | 0          | `2001:db8:1234:0000::/55` |
-| 1          | `2001:db8:1234:0001::/55` |
-| 2          | `2001:db8:1234:0002::/55` |
+| 1          | `2001:db8:1234:0020::/55` |
+| 2          | `2001:db8:1234:0040::/55` |
 | ...        | ...                       |
-| 127        | `2001:db8:1234:007f::/55` |
+| 127        | `2001:db8:1234:00fe::/55` |
 
-#### 3. Vollständige IPv6-Adresse eines Geräts
+### Beispiel – vollständige Adresse eines Hosts:
 
-**Subnetz 2:** `2001:db8:1234:0002::/55`  
-**MAC-Adresse:** `00-25-96-12-34-56`
-
-**Schritte zur Interface-ID:**
-1. Aufteilen der MAC-Adresse:  
-   `00:25:96` + `12:34:56`
-2. Einfügen von `FF:FE`:  
-   `00:25:96:FF:FE:12:34:56`
-3. Invertieren des 7. Bits:  
-   `00` → `02`
-
-**Interface-ID:** `0225:96ff:fe12:3456`
-
-**Vollständige IPv6-Adresse:**  
-`2001:db8:1234:0002:0225:96ff:fe12:3456`
-
-#### 4.Unterschiede zwischen stateful und stateless Adresskonfiguration in IPv6:
-
-1. Stateful (wie DHCPv6): Der Server verfolgt alle zugewiesenen IP-Adressen und verwaltet sie zentral.
-2. Stateless (wie SLAAC): Der Client konfiguriert seine eigene Adresse basierend auf dem Präfix des Routers.
-  
----
-
-### Arten von IPv6 Adressen
-
-#### Loopback-Adresse
-
-| Typ       | Adresse | Beschreibung                                       |
-|-----------|---------|----------------------------------------------------|
-| Loopback  | `::1`   | Selbsttest-Adresse, wie `127.0.0.1` bei IPv4      |
+- **Subnetz:** `2001:db8:1234:0040::/55`
+- **MAC-Adresse:** `00:25:96:12:34:56`
+- → **IPv6-Adresse:**  
+  `2001:db8:1234:0040:0225:96ff:fe12:3456`
 
 ---
 
-#### Unicast-Adressen
+## 5. IPv6-Adresstypen – Übersicht
 
-| Typ               | Bereich        | Beschreibung                                                       | Beispiel                     |
-|-------------------|----------------|--------------------------------------------------------------------|------------------------------|
-| Global Unicast    | `2000::/3`     | Weltweit eindeutige, öffentliche Adressen                         | `2001:db8::1`                |
-| Link-Local        | `fe80::/10`    | Automatisch im lokalen Netzwerk generiert, nicht routbar          | `fe80::1ff:fe23:4567:890a`   |
-| Unique Local (ULA)| `fd00::/8`     | Lokale, private Adressen (vergleichbar mit IPv4 `192.168.x.x`)    | `fd12:3456:789a::1`          |
+### 1. Unicast
 
----
-
-#### Multicast-Adressen
-
-| Bereich      | Bedeutung             | Beispiel     |
-|--------------|------------------------|--------------|
-| `ff01::`     | Interface-local        |              |
-| `ff02::`     | Link-local             | `ff02::1` (alle Nodes im LAN) |
-| `ff05::`     | Site-local             |              |
+| Typ                    | Beschreibung                                                | Präfix / Bereich       |
+|------------------------|-------------------------------------------------------------|------------------------|
+| Global Unicast         | Öffentlich erreichbare Adressen                             | `2000::/3`             |
+| Link-Local             | Nur im lokalen Netz gültig, nicht routbar                   | `fe80::/10`            |
+| Unique Local (ULA)     | Privat, vergleichbar mit `192.168.x.x`                      | `fc00::/7`, meist `fd` |
+| Loopback               | Kommunikation mit sich selbst                               | `::1`                  |
+| Unspecified            | Gerät hat noch keine Adresse                                | `::`                   |
+| IPv4-Mapped IPv6       | Für IPv4-Kompatibilität                                      | `::ffff:192.0.2.128`   |
 
 ---
 
-#### Anycast-Adressen
+### 2. Multicast
 
-| Typ     | Beschreibung                                                                 |
-|---------|------------------------------------------------------------------------------|
-| Anycast | Eine Adresse auf mehreren Geräten – Pakete werden zum „nächsten“ Knoten gesendet |
+| Adresse             | Beschreibung                                  |
+|---------------------|-----------------------------------------------|
+| `ff00::/8`          | Alle Multicast-Adressen                       |
+| `ff02::1`           | Alle Geräte im lokalen Link                   |
+| `ff02::2`           | Alle Router im lokalen Link                   |
+| `ff02::1:ffXX:XXXX` | Solicited-Node (wird für NDP verwendet)       |
 
-> Hinweis: Keine speziellen Adressbereiche – normale Unicast-Adresse wird mehrfach vergeben.
-
----
-
-#### Spezielle / Reservierte Adressen
-
-| Bereich              | Beschreibung                                          |
-|----------------------|-------------------------------------------------------|
-| `::/128`             | Unbestimmte Adresse (z. B. bei DHCPv6-Start)          |
-| `::1/128`            | Loopback-Adresse                                      |
-| `::FFFF:0:0/96`      | IPv4-Mapped IPv6-Adressen                             |
-| `100::/64`           | Discard-Only-Adresse (für zukünftige Nutzung)         |
-| `2001:db8::/32`      | Dokumentationsnetz – für Beispiele in Dokus und Büchern |
+> Hinweis: IPv6 **verwendet Multicast statt Broadcast**.
 
 ---
 
-#### Zusammenfassung
+### 3. Anycast
 
-- **Unicast** = Eine Zieladresse
-- **Multicast** = Mehrere Empfänger gleichzeitig
-- **Anycast** = Nächster Empfänger aus einer Gruppe
-- **Loopback** = Kommunikation mit sich selbst
-- **Link-Local** = Nur im lokalen Netz gültig
-- **ULA** = Private IPv6-Adressen
+- **Sieht aus wie Unicast**, wird aber mehreren Geräten zugewiesen.
+- Paket wird an das **nächstgelegene** (topologisch) Gerät geschickt.
+- Verwendet z. B. bei DNS, CDNs, Load Balancing.
+- Keine eigene Adressklasse – manuell konfiguriert.
 
 ---
 
-## 4. DHCPv4 – Zusammenfassung
+## 6. Kein Broadcast in IPv6
+
+> IPv6 kennt **keinen Broadcast**. Stattdessen wird **Multicast** verwendet.
+
+---
+
+## 7. DHCPv4 – Zusammenfassung
 
 ### Was ist DHCPv4?
 
@@ -279,41 +165,16 @@ DHCPv4 (Dynamic Host Configuration Protocol for IPv4) weist automatisch:
 - Standardgateway
 - DNS-Server
 
+zu.
 
 ---
 
-### DORA-Prozess (DHCP)
+### Ablauf (DORA-Prozess):
 
-Der DORA-Prozess beschreibt den Ablauf, wie ein Client über das **Dynamic Host Configuration Protocol (DHCP)** eine IP-Adresse vom Server erhält. Der Prozess besteht aus vier Hauptschritten:
-
-1. **Discover (DHCPDISCOVER)**
-   - **Was passiert?**  
-     Der Client (z.B. ein Computer oder Smartphone) sendet eine **DHCPDISCOVER-Nachricht** als **Broadcast** an alle Geräte im Netzwerk (IP-Adresse 255.255.255.255), um nach einem DHCP-Server zu suchen. Zu diesem Zeitpunkt hat der Client noch keine IP-Adresse.
-   - **Ziel:**  
-     Der Client sucht nach einem verfügbaren DHCP-Server, der ihm eine IP-Adresse anbieten kann.
-
-2. **Offer (DHCPOFFER)**
-   - **Was passiert?**  
-     Ein DHCP-Server empfängt die DHCPDISCOVER-Nachricht und prüft, ob er freie IP-Adressen zur Verfügung hat. Der Server sendet dann eine **DHCPOFFER-Nachricht**, die eine vorgeschlagene IP-Adresse sowie Netzwerkinformationen (z.B. Subnetzmaske, Lease-Dauer) enthält.
-   - **Ziel:**  
-     Der Server bietet dem Client eine IP-Adresse und relevante Netzwerkinformationen an.
-
-3. **Request (DHCPREQUEST)**
-   - **Was passiert?**  
-     Der Client empfängt eine oder mehrere DHCPOFFER-Nachrichten und wählt eines der Angebote aus. Der Client sendet eine **DHCPREQUEST-Nachricht** zurück an den Server, um das Angebot zu akzeptieren. Diese Nachricht bestätigt die gewählte IP-Adresse.
-   - **Ziel:**  
-     Der Client bestätigt, dass er die vom Server angebotene IP-Adresse annehmen möchte.
-
-4. **Acknowledge (DHCPACK)**
-   - **Was passiert?**  
-     Der Server empfängt die DHCPREQUEST-Nachricht und sendet eine **DHCPACK-Nachricht** zurück, um die Zuweisung der IP-Adresse zu bestätigen. Der Server reserviert die IP-Adresse für den Client und sendet eine Bestätigung, dass der Client nun eine gültige IP-Adresse hat.
-   - **Ziel:**  
-     Der Server bestätigt, dass der Client die IP-Adresse erfolgreich erhalten hat und diese für die angegebene Lease-Dauer gültig ist.
-
----
-
-Dieser Ablauf ermöglicht es Geräten im Netzwerk, automatisch eine IP-Adresse zu erhalten, ohne dass eine manuelle Konfiguration erforderlich ist.
-
+1. **Discover:** Client sendet DHCPDISCOVER (Broadcast)
+2. **Offer:** Server bietet eine IP-Adresse an (DHCPOFFER)
+3. **Request:** Client nimmt Angebot an (DHCPREQUEST)
+4. **Acknowledge:** Server bestätigt (DHCPACK)
 
 ---
 
@@ -330,3 +191,4 @@ Dieser Ablauf ermöglicht es Geräten im Netzwerk, automatisch eine IP-Adresse z
 Laptop verbindet sich mit WLAN → DHCP weist automatisch IP zu → Verbindung steht.
 
 ---
+
