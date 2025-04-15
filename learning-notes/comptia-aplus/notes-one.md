@@ -1,4 +1,4 @@
-# CompTIA A+ Notes Part One
+# CompTIA A+ Notes Part One (Professor Messer)
 ## Laptop Hardware 1.1  
 - Engineered to precise specifications 
     - A challenging repair 
