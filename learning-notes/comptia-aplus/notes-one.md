@@ -1857,4 +1857,218 @@ nslookup www.professormesser.com
     - Uses the SATA standard
 - Similar in size to SATA
     - Connectors are physically different
-## SCSI Device Cables 3.1 //
+## SCSI Device Cables 3.1
+### The SCSI standard 
+- Small Computer Systems Interface
+    - Not really "small" any longer
+- Originally designed to string many peripherals together onto a single cable/controller
+    - Up to 16 devices in a SCSI "chain"
+- Many different formats
+    - Fast SCSI, Ultra SCSI, Ultra Wide SCSI, Ultra2 SCSI, Ultra3 SCSI, Ultra-320 SCSI, Ultra-640 SCSI, iSCSI (SCSI over IP)
+- Parallel and serial options
+### SCSI advantages
+- Not just for hard drives
+    - Scanners, tape drives, CD-ROM drives
+- Many devices on a single bus
+    - 8 on narrow bus, 16 on wide bus
+- Very intelligent interface functionality
+    - Much of the difficult configuration work is done between the SCSI devices
+- Industry longevity
+    - Well supported in the enterprise
+    - A standard drive for virtual systems
+### SCSI ID and logical unit (LUN) 
+- Every SCSI device on a single bus is assigned a seperate ID number
+    - SCSI ID 0 (SCSI controller), ID 2 (hard drive), ID 3 (CD-ROM)
+- Logical units (LUNs) are defined within each SCSI ID
+    - Seperate drives in a storage array or virtual machine
+- The signal at the "end" of a physical SCSI bus is terminated
+    - Can be internal to the device or a seperate termination device
+- Serial attached SCSI (SAS) devices have no jumpers, terimnators, or settings.
+### Serial attached SCSI 
+- Move from parallel to serial
+    - Increased throughput
+    - Similar to the move from PATA to SATA
+- Point-to-point connection
+    - No more daisy chains
+- No termination required
+    - The bus has two devices on it
+- The control and management of SCSI
+    - The speed of a serial connection 
+## PATA Device Cables 3.1 
+### The PATA standard 
+- Parallel AT attachment, Parallel ATA, ATA
+    - Remember the PC/AT?
+- An evolutionary process
+    - Circa 1999
+- Originally called Integrated Drive Electronics (IDE)
+    - A Western Digital invetion
+    - 2nd generation called EIDE (Enhanced IDE)
+- The evolution
+    - Promised faster speeds (from 16 MB/s through 133 MB/s)
+    - Additional devices (CD-ROM drives, etc.)
+- Now called Parallel ATA (PATA)
+### PATA cabling 
+- Motherboard Connection
+    - 40-wire
+    - 80-wire
+### PATA and SATA cabling 
+- PATA is much bigger than SATA (keep in mind that it transfers multiple bits at the same time and SATA does one bit at a time)
+## Adapters and Converters 3.1 
+### Adapters and converters 
+- The best laid plans
+    - Need an adapter
+- Convert between different connectors
+    - Electrically compatible
+- Convert from one format to another
+    - You need Ethernet but you only have USB
+- A good temporary fix
+    - Or a good permanent one
+### DVI to HDMI
+- DVI-D and HDMI are electrically compatible
+    - HDMI is a backward-compatible with DVI-D
+    - No signal conversion required
+    - No loss of video quality
+### DVI to VGA
+- DVI-A includes analog signals
+    - Backward compatible with VGA 
+    - Only 640 x 480 is officially supported
+- May only need an adapter
+    - Analog to analog
+- VGA to DVI digital will need a converter
+    - Check your interface specifications
+### USB to Ethernet 
+- Some laptops don't have a wired Ethernet interface
+    - Convert USB to Ethernet
+### USB hub 
+- Connect many devices
+    - High speed USB connectivity
+## Copper Connectors 
+### RJ11 Connector 
+- 6 position, 2 conductor (6P3C)
+    - Some cables will wire additional conductors
+- Telephone or DSL connection
+- Registered Jack type 45
+- 8 position, 8 conductor (8P8C)
+    - Modular connector
+    - Ethernet
+### F-connector 
+- Cable television
+    - Cable modem
+    - DOCSIS (Data Over Cable Service Interface Specification)
+### Punchdown block 
+- Wire-to-wire pitch panel
+    - No intermediate interface required
+- Wires are "punched" into the block
+    - Connecting block is on top
+- Additional wires punched into connecting block
+    - Patch the top to the bottom
+### USB 1.1/2.0 connectors 
+- Standard-A Plug
+- Standard-B Plug
+- Mini-B Plug
+- Micro-B Plug
+### USB 3.0 connectors 
+- USB 3.0 Standard-B Plug
+- USB 3.0 Standard-A Plug
+- USB 3.0 Micro-B Plug
+### USB-C
+- 24-pin double-sided USB connector
+    - Used for both hosts and devices
+- Used for USB, Thunderbolt
+    - Interface is the same, signal can vary
+- USB-Micro-B Plug, USB-C Plug
+### Molex connector 
+- 4-pin peripheral power connector
+    - Molex Connector Company
+    - AMP MATE-N-LOK
+    - Provides +12V and +5 V
+- Power for many devices in the computer case
+    - Storage devices
+    - Optical drives
+    - Fans
+    - Other peripherals
+- You can see if it is supported by the power supply
+### Lightning 
+- Apple priprietary
+    - 8-pin digital signals
+    - iPhone, iPad, iPod devices
+- Some advantages over Micro-USB
+    - Higher power output for phones and tablets
+    - Can be inserted either way
+### DB-9 
+- D-subminiature or D-sub
+    - The letter refers to the connector size
+- Commonly used for RS-232
+    - Recommended Standard 232
+    - An industry standard since 1969
+- Serial communications standard
+    - Built for modem communication
+    - Used for modems, printers, mice, networking
+- Now used as a configuration port
+    - Management or Console port
+## Fiber Connectors 3.1 
+### LC - Local Connector
+### ST - Straight Tip
+### SC - Subscriber Connector
+- Subscriber Connector
+- "Square Connector"
+## An Overview of Memory 3.2 
+### What is memory ? 
+- Random Access Memory (RAM) is the most common
+    - But it's not the only kind of memory
+- RAM is not referring to hard drive or SSD storage
+    - Don't mix the two terms
+    - Data is stored permanently on the drive
+- Data and programs can only be used when moved to RAM
+### RAM (Random Access Memory) slots 
+- Memory types have changed through the years
+    - Driven by standardization and technology
+- One of the most important components of your computer
+    - Speed, speed, speed
+- Every motherboard is different
+    - Check your documentation
+### DIMM 
+- DIMM
+    - Dual inline memory module
+    - Electrical contacts are different on each side
+- 64 bit data width
+### SO-DIMM 
+- Small Outline Dual In-line Memory Module
+    - About half the width as a DIMM
+- Used in laptops and mobile devices
+### Memory modules 
+- DIMM
+- SO-DIMM
+### Dynamic Random Access Memory 
+- The memory on the DIMM
+- Dynamic
+    - Needs constant refreshing
+    - Without refreshing, the data in memory disappears
+- Random access
+    - Any storage location can be accessed directly
+    - Unlike magnetic tape
+### SDRAM 
+- Synchronous DRAM (SDRAM)
+- SDRAM is synchronous with the common system clock
+    - Queue up the process while waiting for another
+    - Classic DRAM didn't wait for a clock signal
+### SDR vs DDR 
+- SDR
+    - One Clock Cycle (Data 1)
+- DDR
+    - One Clock Cycle (Data 1, Data 2)
+### Double Data Rate 3 (DDR3) SDRAM 
+- Twice the data rate of DDR2
+    - Larger chip capacities - Maximum 16 GB per DIMM
+- No backwards compatibility
+    - Speed brings sacrifice
+### Double Data Rate 4 (DDR4) SDRAM 
+- Speed increases over DDR3
+    - Faster frequencies
+    - Maximum 64 GB per DIMM
+- Again, no backwards compatibility
+### Double Data Rate 5 (DDR5) SDRAM 
+- Faster data transfers between the memory module and motherboard
+    - Maximum of 64 GB per DIMM
+- The key has moved
+    - No backwards compatibility 
