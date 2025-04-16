@@ -2072,3 +2072,37 @@ nslookup www.professormesser.com
     - Maximum of 64 GB per DIMM
 - The key has moved
     - No backwards compatibility 
+## Memory Technologies
+### Virtual memory 
+- Different names
+    - Virtual RAM, swap file, etc.
+- Swap currently unused application data to storage
+    - Free up space for other applications
+- Managed automatically by the operating system
+    - Some configuration settings are available
+### Multi-channel memory 
+- Dual-channel, triple-channel or quad-channel
+- Memory combinations should match
+    - Exact matches are best
+- Memory module slots are often colored differently
+### Memory that checks itself 
+- Used on critical computer systems
+    - VM servers, database servers, any server
+- Parity memory
+    - Adds an additional parity bit
+    - Won't always detect an error
+    - Can't correct an error
+- Error Correcting Code (ECC)
+    - Detects errors and corrects on the fly
+    - Not all systems use ECC
+    - It looks the same as non-ECC memory
+### Parity 
+
+| Bit 1 | Bit 2 | Bit 3 | Bit 4 | Bit 5 | Bit 6 | Bit 7 | Bit 8 | Parity Bit | 
+|-------|-------|-------|-------|-------|-------|-------|-------|------------|
+|   1   |   1   |   1   |   0   |   0   |   1   |   1   |   1   |      0     | 
+|   0   |   0   |   0   |   0   |   0   |   0   |   1   |   0   |      1     |
+|   1   |   0   |   0   |   1   |   1   |   0   |   0   |   0   |      1     | 
+
+- Valid or error?
+    - If the 1s are even no error, if not then error
