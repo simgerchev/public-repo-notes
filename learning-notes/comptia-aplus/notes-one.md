@@ -2212,7 +2212,7 @@ nslookup www.professormesser.com
 - Different RAID levels
     - Some redundant, some not
 ### RAID 0 - Striping
-'''
+```
 +-----------+-----------+
 |  Disk 1   |  Disk 2   |
 +-----------+-----------+
@@ -2220,7 +2220,7 @@ nslookup www.professormesser.com
 | Block B1  | Block B2  |
 | Block C1  | Block C2  |
 +-----------+-----------+
-'''
+```
 
 - File blocks are split between two or more physical drives
 - High performance
@@ -2228,7 +2228,8 @@ nslookup www.professormesser.com
 - No redundancy
     - A drive failure breaks the array
     - Raid 0 is zero redundancy
- ### RAID 1 - Mirroring  
+ ### RAID 1 - Mirroring
+ ```
 +-----------+-----------+
 |  Disk 1   |  Disk 2   |
 +-----------+-----------+
@@ -2236,6 +2237,8 @@ nslookup www.professormesser.com
 | Block B1  | Block B1  |
 | Block C1  | Block C1  |
 +-----------+-----------+
+```
+
 
 - File blocks are duplicated between two or more physical drives 
 - High disk utilization 
@@ -2243,7 +2246,8 @@ nslookup www.professormesser.com
     - Required disk space is doubled
 - High redundancy 
     - Drive failure does not affect data availability
-### RAID 5 - Striping with parity 
+### RAID 5 - Striping with parity
+```
 +-------------+------------+------------+
 |  Disk 1     |  Disk 2    |  Disk 3    |
 +-------------+------------+------------+
@@ -2251,6 +2255,7 @@ nslookup www.professormesser.com
 |  Block 1B   |  Parity B  |  Block 2B  |
 |  Parity C   |  Block 1C  |  Block 2C  |
 +-------------+------------+------------+
+```
 
 - File blocks are striped
     - Along with a parity block
@@ -2260,15 +2265,11 @@ nslookup www.professormesser.com
 - High redundancy
     - Data is available after drive failure
     - Parity calculation may affect performance
- ### RAID 10 (1+0) - A stripe of mirrors 
+### RAID 10 (1+0) - A stripe of mirrors
+```
           Striping
-       +----------+
-       |          |
-     Mirror 1   Mirror 2
-   +---------+ +---------+
-   | Disk 1  | | Disk 3  |
-   | Block A | | Block B |
-   +---------+ +---------+
-   | Disk 2  | | Disk 4  |
-   | Block A | | Block B |
-   +---------+ +---------+
+       +------------------+
+       |                  |
++------+------+        ---+-----------
+|             |       
+```
