@@ -2211,7 +2211,8 @@ nslookup www.professormesser.com
     - They're also inexpensive disks.
 - Different RAID levels
     - Some redundant, some not
-### RAID 0 - Striping 
+### RAID 0 - Striping
+'''
 +-----------+-----------+
 |  Disk 1   |  Disk 2   |
 +-----------+-----------+
@@ -2219,6 +2220,7 @@ nslookup www.professormesser.com
 | Block B1  | Block B2  |
 | Block C1  | Block C2  |
 +-----------+-----------+
+'''
 
 - File blocks are split between two or more physical drives
 - High performance
