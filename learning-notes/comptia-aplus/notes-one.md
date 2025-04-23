@@ -2267,9 +2267,63 @@ nslookup www.professormesser.com
     - Parity calculation may affect performance
 ### RAID 10 (1+0) - A stripe of mirrors
 ```
-          Striping
-       +------------------+
-       |                  |
-+------+------+        ---+-----------
-|             |       
+           RAID 10 (RAID 1 + 0)
+
+             +----------------+
+             |    RAID 0     |
+             | (striping)    |
+             +-------+--------+
+                     |
+        +------------+------------+
+        |                         |
+   +----+----+              +----+----+
+   | RAID 1  |              | RAID 1  |
+   | Mirror  |              | Mirror  |
+   +----+----+              +----+----+
+        |                         |
+  +-----+-----+             +-----+-----+
+  | Disk 1    |             | Disk 3    |
+  | Disk 2    |             | Disk 4    |
+  +-----------+             +-----------+  
 ```
+
+- The speed of striping, the redundancy of mirroring
+    - The best of both worlds
+- Need at least 4 drives
+## Motherboard Form Factors 3.4 
+### Motherboard form factors 
+- Physical size
+    - Case sizing
+- Basic layout
+    - Room for small changes
+- Power
+    - Standard connectors
+- Airflow
+    - Increasingly important
+- Wikipedia: There are 40 different motherboard types categorized!
+### What you need to know 
+- CompTIA exam objectives:
+    - "3.4 - Given a scenario, install and configure motherboards, central processing units (CPUs), and add-on cards ".
+- Focus on which motherboard would be the best choice for a scenario
+    - Memorizing the dimensions of the motherboard probably isn't the most important thing
+    - ATX or ITX
+- Which motherboard would you choose?
+    - Media center, video editing, thin client, etc.
+### Motherboard form factors 
+- Standard-ATX
+- Mini-ITX
+### ATX form factor 
+- Advanced Technology Extended
+- Standardized by Intel in 1995
+    - Seen many updates over the years
+- Power
+    - 20 pin connector
+    - 24 pin connector, additional 4/8 pin connector
+### ITX form factor 
+- A series of low-power motherboards
+    - Developed by VIA Technologies in 2001
+    - Small form factor
+- Mini-ITX is screw-compatible with ATX
+    - Fits almost any enclosure
+- Small form factor uses
+    - Single-purpose computing, i.e., streaming media 
