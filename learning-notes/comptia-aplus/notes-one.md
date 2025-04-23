@@ -2379,3 +2379,105 @@ x4 Lanes      || || || ||
 | PCI EXPRESS Device B   | 
 +------------------------+
 ```
+## Motherboard Connectors 3.4 
+### 24-pin motherboard power 
+- Main motherboard power
+    - Provides +3.3V, +/-5V, and +/- 12V
+- 20 pin connector was the original ATX standard
+    - 24 pin was added for PCI Express power
+- You can connect a 24-pin connector to a 20-pin motherboard
+    - Some cables are 20-pin + 4-pin
+### 4-pin ATX 
+- 4-pin ATX +12V power
+    - ATX12V Advanced Technology Extended motherboard
+- Additional 12 volt power for older motherboards
+    - Used primarly for CPU
+- May be labeled ATX12V, P4, or CPU
+    - And keyed for the appropriate connector
+### Storage drive interfaces - SATA 
+### eSATA expansions 
+### Headers 
+- A pin header
+    - A simple electrical interface
+    - The connector is attached to the header
+- Many different uses
+    - Power
+    - Peripheral connections
+    - Lights
+    - Buttons
+### Front panel connectors 
+## Motherboard Compatibility 3.4 
+### Intel and AMD 
+- Two solid CPU manufacturers
+    - The differences are subtle
+- Cost
+    - AMD tends to be a bit less expensive
+- Different sockets
+    - The motherboard is designed for a particular CPU
+- Choosing a side
+    - Historically, AMD is value and Intel is performance
+    - This is a dynamic technology segment
+### Server motherboards 
+- Multisocket
+    - Supports multiple physical CPU packages
+    - Split the load
+- Memory slots
+    - Supports 4+ modules
+- Expansion slots
+    - Many slots and different sizes
+- Overall size
+    - Designed for a rack-mounted system
+    - Larger ATX-sized system
+### Desktop motherboards 
+- Can range from full-size motherboards to compact or monitor-only systems
+    - We can do a lot with increasingly smaller systems
+- Single CPU
+    - Reduces cost and complexity
+- Memory slots
+    - Usually two or four
+- Expansion slots
+    - May have limited options
+### Mobile motherboards 
+- Laptops
+    - Small and light
+- CPUs
+    - Limited in speed
+    - Thermal throttling
+- Limited system modification
+    - Memory, CPU, functionality
+- Portability
+    - Smaller devices
+    - Low power consumption
+### System board 
+- Proprietary
+    - Built to fit
+- Replacement isn't easy
+    - Swap the entire board
+    - Most components are on the system board
+## The BIOS 3.4 
+### BIOS - Basic Input/Output System 
+- The software used to start your computer
+    - The firmware
+    - System BIOS, ROM BIOS
+    - ROM or flash memory
+- Initializes CPU and memory
+    - Build the workspace
+- POST
+    - Power-On Self-Test
+- Look for a boot loader
+    - Start the operating system
+### Legacy BIOS 
+- The original / traditional BIOS
+    - It's been around for more than 25 years
+- Older operating systems talked to hardware through the BIOS
+    - Instead of accessing hardware directly
+- Limited hardware support
+    - No drivers for modern network, video, and storage devices
+### UEFI BIOS 
+- Unified Extensible Firmware Interface
+    - Based on Intel's EFI (Extensible Firmware Interface)
+- A defined standard
+    - Implemented by the manufacturers
+- Designed to replace the legacy BIOS
+    - Need a modern BIOS for modern computers
+    - Graphical and text-based 
