@@ -2604,3 +2604,53 @@ x4 Lanes      || || || ||
     - Lightweight HSMs for personal use (Smart card, USB, flash memory)
 - Cryptographic accelerators
     - Offload that CPU overhead from other devices
+## CPU Features 3.4
+### Operating system technologies 
+- 32-bit vs 64-bit
+    - Processor specific
+- 32-bit processors can store 2ˆ32 = 4,294,967,296 values
+- 64-bit processors can store 2ˆ64 = 18,446,744,073,709,551,616 values
+    - 4 GB vs 17 billion GB
+    - The OS has a maximum supported value
+- Hardware drivers are specific to the OS version (32-bit / 64-bit)
+    - 32-bit (x86), 64-bit (x64)
+- 32-bit OS cannot run 64-bit apps
+    - But 64-bit OS can run 32-bit apps
+- Apps in a 64-bit Windows OS
+    - 32-bit apps: \Program Files (x86)
+    - 64-bit apps: \Program Files
+### Advanced RISC Machine (ARM) 
+- CPU architecture developed by Arm Ltd.
+    - They design the chip, others license and build
+- Simplified instruction set
+    - Efficient and fast processing
+    - Less power
+    - Less heat
+- Traditionally used for mobile and IoT devices
+    - The lines are constantly blurring
+### Processor cores 
+```
+
++----------+----------+----------+----------+
+| Core 1   | Core 2   | Core 3   | Core 4   |
+| CPU      | CPU      | CPU      | CPU      |
+|          |          |          |          |
+| L1 Cache | L1 Cache | L1 Cache | L1 Cache |
+| L2 Cache | L2 Cache | L2 Cache | L2 Cache |
++----------+----------+----------+----------+
+| Shared L3 Cache                           |
++-------------------------------------------+
+                    |
+                    |
++--------------------------------------------+
+| Memory Bus                                 |
++--------------------------------------------+
+                    |
+                    |
++--------------------------------------------+
+| RAM                                        |
++--------------------------------------------+
+
+```
+- Dual-core / Quad-core / Octa-core / Multi-core
+    - And more all the time 
