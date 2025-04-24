@@ -2653,4 +2653,82 @@ x4 Lanes      || || || ||
 
 ```
 - Dual-core / Quad-core / Octa-core / Multi-core
-    - And more all the time 
+    - And more all the time
+- Multiple cores
+    - Each core has its own cache
+    - The entire chip may have a shared cache
+### Multithreading 
+- Hyper-Threading Technology (HTT)
+- One CPU, acts like two
+- Doesn't actually work as fast as two
+    - 15 % to 30 % performance improvement
+- Operating system must be written for HTT
+    - Windows XP and later (any modern OS)
+### Virtualization support 
+- Run other operating systems within a single hardware platform
+    - Multiple operating systems share physical hardware components
+- Virtualization in software was limited
+    - Performance and hardware management challenges
+- Virtualization added to the processor
+    - Hardware is faster and easier to manager
+    - Intel Virtualization Technology (VT)
+    - AMD Virtualization (AMD-V)
+## Expansion Cards 3.4 
+- Extend the functionality of your computer
+    - You may need more than the motherboard provides
+- Relatively simple process
+    - Designed for end-user installation
+- Install hardware
+    - Add a card
+- Install a driver
+    - Software for the operating system
+### Sound Card 
+- Output
+    - High-end audio
+    - Advanced headphone amp
+    - Home theater, Dolby decoding
+- Multiple inputs
+    - Music capture
+    - Podcasting
+    - Microphone
+### Video Card 
+- Many CPUs include an integrated GPU
+    - Video functionality is built into the CPU package
+- Discrete graphics
+    - The GPU is not part of the CPU
+- Seperate interface card
+    - High performance
+### Integrated graphics 
+### Capture Card 
+- Video as an input
+    - Video capture
+    - Live streaming
+    - External cameras
+- High performance
+    - Video bandwidths can be quite high
+    - PCI Express connection
+### Network Interface Card (NIC) 
+- Ethernet connection
+    - Motherboard may not include a NIC
+    - Onboard NIC may not be working
+- Additional connections
+    - Servers
+    - Routers
+    - Security devices 
+### Multi-port Ethernet 
+### Documentation 
+- Check the motherboard documentation
+    - Number and type of slots
+- Check the adapter card documentation
+    - Minimum requirements - Hardware, Software
+    - Knowledge base - Any "gotchas?"
+    - Support forums - What are other people saying? know 
+- You may need to perform a driver installation before installing hardware
+### Driver installation 
+- You checked the documentation first, right?
+- Check the web for the latest version
+- Uninstall previous drivers through Windows Device Manager
+- Manufacturer provided setup program
+- Manual installation through Windows Device Manager
+- Check the Device Manager for the status
+    - Does it work? 
