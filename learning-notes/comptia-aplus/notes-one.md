@@ -3054,7 +3054,6 @@ x4 Lanes      || || || ||
 ### The laser printing process 
 
 | Step 1: Processing   | Build the entire page in memory                      |
-|----------------------|------------------------------------------------------|
 | Step 2: Charging     | Prepare the drum with a negative electrostatic charge|
 | Step 3: Exposing     | Write the image with the laser                       |
 | Step 4: Developing   | Add negatively-charged toner to the imaging drum     |
