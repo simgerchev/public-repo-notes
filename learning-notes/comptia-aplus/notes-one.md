@@ -3007,3 +3007,57 @@ x4 Lanes      || || || ||
 - Scan to cloud
     - Cloud storage account
     - Google Drive, Dropbox, etc. 
+## Laser Printers 3.7
+- Combine a laser, high voltage, charged ions, powdered ink, heat, and paper
+- Very high quality
+- Fast printing speeds
+- Very complex
+    - Many moving parts
+    - Requires on-printer memory
+    - Messy on the inside
+### Imaging drum 
+- Image is drawn onto a photosensitive drum
+    - "Painted" with a laser
+- Picks up toner
+    - Transfers toner to the paper
+- Can be seperate from the toner cartridge
+    - Or combined
+### Fuser assembly 
+- Heat and pressure
+    - Melt plastic toner powder
+    - Permanently bond toner to paper
+### Transfer belt and roller 
+- Color laser printers
+    - Cyan, yellow, magenta, black
+- Four seperate toner cartridges
+- Image is transferred from all cartridges to the single belt
+    - And then to a single transfer roller
+### Pickup rollers 
+- Pickup paper
+    - Should be a single page at a time
+    - Problems if no paper is picked up or multiple sheets are picked
+- Should be periodically cleaned or replaced
+### Seperation pad 
+- Pull just the top sheet from the paper tray
+    - Not multiple sheets
+- Small and inexpensive
+    - Easy to clean or replace
+### Duplexing assembly 
+- Printers usually print on a single side
+    - Not both sides simultaneously
+- Printing on both sides is a two step process
+    - Print side one, print side two
+- You need mechanisms to "flip" the page
+    - Automatically
+- Can be built-in to the printer
+    - Or available as an add-on
+### The laser printing process 
+
+| Step 1: Processing   | Build the entire page in memory                      |
+|----------------------|------------------------------------------------------|
+| Step 2: Charging     | Prepare the drum with a negative electrostatic charge|
+| Step 3: Exposing     | Write the image with the laser                       |
+| Step 4: Developing   | Add negatively-charged toner to the imaging drum     |
+| Step 5: Transferring | Move the toner from the drum to the paper            |
+| Step 6: Fusing       | Heat and pressure                                    |
+| Step 7: Cleaning     | Remove excess toner                                  |
