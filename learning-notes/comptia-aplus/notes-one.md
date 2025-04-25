@@ -2732,3 +2732,278 @@ x4 Lanes      || || || ||
 - Manual installation through Windows Device Manager
 - Check the Device Manager for the status
     - Does it work? 
+## Cooling 3.4 
+### Case fans 
+- Cool air is pulled through a personal computer
+    - Always check for good airflow
+- Motherboard layout becomes important
+- Component location is key
+    - Devices, wiring, power
+- Many different sizes and styles
+    - And volume levels
+### On-board fans 
+- Designed to cool an entire adapter card
+- Can be bulky
+    - May take additional adapter card space
+- Usually seen on high-end graphics cards
+### Fan specifications 
+- Standard sizes
+    - 80mm, 120mm, 200mm, etc.
+- Different speeds
+    - Variable speed
+- Different noise levels
+    - Not all fans sound the same
+### Fanless / passive cooling 
+- No fans, no noise
+    - Silent operation
+- Specialized functions
+    - Video servers, TV set top box, satellite receiver, media server
+- Functions are very controlled
+    - Carefully measured thermal tests
+- Low-power components
+    - Heat sinks
+### Heat sink 
+- Dissipate heat through thermal conduction
+    - Copper or aluminium alloy
+- Fans/grid increase surface area
+    - Heat is then transferred to the cooler air
+- They get HOT - don't touch them!
+- Thermal paste creates a good contact between the chip and the heat sink
+### Thermal paste 
+- Thermal grease, conductive grease
+    - Thermally conductive adhesive
+- Place between the heat sink and the component
+    - Improves thermal conductivity
+    - Moves the heat away from the component
+- A little bit goes a long way
+    - Pea-sized application
+### Thermal pad 
+- Conduct heat without the mess
+    - Cut to size and install
+- Easy to use
+    - Won't leak and damage components
+- Almost as as effective as thermal paste
+    - But still very good
+- Not reusable
+    - Remove and replace
+### Liquid cooling 
+- Coolant is circulated through a computer
+    - Not a new concept
+        - Automobiles, mainframe computers
+- High-end systems
+- Graming, graphics
+- Overclocking
+## Computer Power 3.5 
+### Computer power supply 
+- Computer uses DC voltage
+    - Most power sources provide AC voltage
+- Convert 120 V AC or 240 V AC
+    - To 3.3 V DC, 5 V DC, and 12 V DC
+- You'll know when this isn't working
+    - An important component
+### Amp and volt 
+- Ampere (amp, A) - The rate of electron flow past a point in one second
+    - The diameter of the hose
+- Voltage (volt, V) Electrical "pressure" pushing the electrons
+    - How open the faucet is
+### Power 
+- Watt (W) - Measurement of real power use
+    - volts * amps = watts
+    - 120V * 0.5A = 60W
+### Current 
+- Alternating current (AC)
+    - Direction of current constantly reverses
+    - Distributes electricity efficiently over long distances
+    - Frequency of this cyrcle is important
+        - US/Canada - 110 to 120 volts of AC (VAC), 60 hertz (Hz)
+        - Europe - 220-240 VAC, 50 Hz
+- Direct current (DC)
+    - Current moves in one direction with a constant voltage
+### Dual-voltage input options 
+- Voltage varies by country
+    - US/Canada = 120 volts of AC (VAC), 60 hertz (Hz)
+    - Europe - 230 VAC, 50 Hz
+- Manually switch between 120 V and 230 V
+    - Get your meter !
+    - Or use an auto-switching power supply
+- Don't plug a 120 V power supply into a 230 V power source!
+### Power supply output 
+- Different voltages
+    - For different components
+- Positive and negative voltage
+    - Voltage is a difference in potential
+    - The electrical ground is a common reference point
+    - Depends on where you measure from
+- At the front door of your house
+    - The second floor is +10 feet
+    - The basement is -10 feet
+- +12 V
+    - PCIe adapters, hard drive motors, cooling fans, most modern components
+- +5 V
+    - Some motherboard components
+    - Many components are now using +3.3 V
+- +3.3 V
+    - M.2 slots, RAM slots, motherboard logic circuits
+- +5 VSB
+    - Standby voltage
+- -12 V
+    - Integrated LAN
+    - Older serial ports
+    - Some PCI cards
+- -5 V
+    - Available for ISA adapter cards
+    - Most cards didn't use it
+    - Today's motherboards don't have ISA slots
+### 24-pin motherboard power 
+- Main motherboard power
+    - Provides +3.3 V, +/- 5V, and +/- 12V
+- 20 pin connector was the original ATX standard
+    - 24 pin was added for PCI Express power
+- You can connect a 24-pin connector to a 20-pin motherboard
+    - Some cables are 20-pin + 4-pin
+### Redundant power supplies
+- Two (or more) power supplies
+    - Internal to the server
+- Each power supply can handle 100% of the load
+    - Would normally run at 50% of the load
+- Hot-swappable
+    - Replace a faulty power supply without powering down
+### Power supply connectors 
+- Fixed connectors
+    - Connected to the power supply
+    - May have too many connectors
+    - May not have enough
+- Modular
+    - Add cables as needed
+    - Fewer leftover wires, better airflow
+    - A bit more expensive
+### Sizing a power supply 
+- Power supplies are rated by watts
+    - Overall and by individual voltages
+- Bigger isn't necessarily better
+    - More expensive doesn't speed up your computer
+- Physical size is relatively standard
+    - Older cases and systems may have priprietary sizes
+### Sizing a power supply 
+- Calculate the watts required for all components
+    - CPU, storage devices, video adapter
+    - Many online calculators
+- Video adapters are usually the largest power draw
+    - Many video card specifications list a recommended power supply wattage
+- 50% capacity is a good rule of thumb
+    - Power supply runs efficiently and there's room to grow
+## Multifunction Devices 3.6
+- Multifunction devices (MFD)
+    - Printer
+    - Scanner
+    - Fax
+    - Network connection
+    - Phone line connection
+    - Print from web
+- There are a lot of things that can go wrong
+    - You are going to fix them
+### Unboxing a device 
+- These can be large devices
+    - Make sure you have enough room
+    - Stay our of walkways
+- Check the area
+    - Power
+    - Network
+    - Accessibility
+### Printer drivers 
+- Specific to a printer model
+    - Get this exactly right
+- Get the right operating system drivers
+    - Windows 10, Windows 11
+- Get the right version of the operating system
+    - 32-bit drivers are very different than 64-bit drivers
+- You can't mix and match drivers
+    - It's a very specific task
+### PCL or PostScript 
+- PCL (Printer Command Language)
+    - Created by Hewlett-Packard
+    - Commonly used across the industry
+- PostScript
+    - Created by Adobe Systems
+    - Popular with high end printers
+- Make sure the drivers match the printer
+    - PCL printer, PCL driver
+    - PostScript printer, PostScript driver
+### Wired device sharing 
+- USB type B
+    - The most common connector
+    - USB Type B on the printer, USB Type A on the computer
+- Ethernet
+    - RJ45 connector
+- May include more than one option
+### Wireless device sharing
+- Bluetooth
+    - Limited range
+- 802.11 Infrastructure mode
+    - Many devices using an access point
+- 802.11 Ad hoc mode
+    - No access point
+    - Direct link between wireless devices
+### Sharing the printer
+- Printer share
+    - Printer is connected to a computer
+    - The computer shares the printer
+    - Computer needs to be running
+- Print server
+    - Print directly to the printer
+    - Jobs are queued on the printer
+    - Jobs are managed on the printer
+    - Web-based front-end
+    - Client utility
+### Configuration settings 
+- Duplex
+    - Save paper
+    - Print on both sides of the page without manually flipping over the paper
+    - Not all printers can do this
+- Orientation
+    - Portrait vs Landscape
+    - The paper doesn't rotate
+    - The printer compensates
+- Tray settings
+    - Printers can have multiple trays
+    - Plain paper, letterhead, etc.
+    - Choose the correct tray in the print dialog
+- Quality
+    - Resolution
+    - Color, greyscale
+    - Color saving
+### Printer Security 
+- User authentication
+    - Everyone can print
+    - Set rights and permissions
+    - Printing vs managing the printer
+- Badging
+    - Authenticate when using the printer
+    - Your job doesn't print until you use your employee badge
+    - Quick and easy
+- Audit logs
+    - Cost management
+    - Security monitoring
+    - Event Viewer / System Events
+    - May be built into the printer or print server
+- Secured prints
+    - Printer must support secure printing
+    - Define a passcode
+    - Use the passcode at the printer
+### Flatbed scanner 
+- Different form factors
+    - All-in-one multifunction device
+    - Standalone flatbed
+- May include an ADF
+    - Automatic Document Feeder
+    - Multiple pages
+### Network scan services 
+- Scan to email
+    - Scans are sent to your inbox
+    - Large scans can fill up your mailbox
+- Scan to folder
+    - Using SMB (Server Message Block)
+    - Send to a Microsoft share
+- Scan to cloud
+    - Cloud storage account
+    - Google Drive, Dropbox, etc. 
