@@ -3132,4 +3132,126 @@ x4 Lanes      || || || ||
 - Remove paper from the path
     - Firm pressure, don't rip
 - Check for any scraps of paper
-    - Remove all loose paper  
+    - Remove all loose paper
+## Therman Printers 3.7
+- White paper
+    - Turns black when heated
+    - No ink !
+-  Very quiet!
+    - Almost silent
+- Paper is sensitive to light and heat
+    - And clear tape
+### Feed assembly 
+- Pull paper through the printer
+    - Relatively small paper path
+### Heating element
+- Full-length heating element
+    - No moving print head
+### Thermal paper
+- Paper covered with a chemical
+    - Thermochromic paper / thermal paper
+    - Changes color when heated
+- Cash registers, credit card terminals
+    - And quiet areas
+- Looks like normal paper
+    - Feels a bit different
+## Thermal Printer Maintenance 3.7 
+### Thermal Paper Replacement 
+- Relatively inexpensive
+    - But impossible to substitute
+- Different sizes
+    - Not like laser printer paper
+    - Keep a list
+- Actual replacement process is easy
+    - Simple paper feed
+    - Small device
+### Cleaning the heating element 
+- Liquid cleaner
+    - Isopropyl alcohol (IPA)
+    - Get a cleaning pen
+    - Check manufacturer's recommendations
+- Swap gently
+    - Usually small areas
+- Use a cleaning card
+    - Cleans the head
+    - And paper pathways
+### Removing debris 
+- Relatively small amount
+    - Paper bits and dust
+    - No toner !
+- Blow out the printer
+    - Take it outside
+- Wipe it out
+    - Damp cloth
+- Avoid using a vacuum
+    - Unless it's designed for computers
+        - Resists static buildup/discharge
+### Paper sensitivity to heat 
+- Heat is used to create the output on the thermal paper
+    - More heat will darken the entire page
+- Avoid hot areas
+    - Car dashboard
+    - Radiator
+    - Hair dryers
+- Receipt will also fade over time
+    - Don't use as archival media
+## Impact Printers 3.7 
+### Dot-matrix (impact) printers 
+- Print head with a small matrix of pins
+    - Presses against a ribbon to make a mark on paper
+- Relatively niche use cases 
+```
++-----------------------------------+
+| Pros              | Cons          |
++-------------------+---------------+
+| Good for carbon/  | Noisy         |
+| multiple copies   |               |
++-------------------+---------------+
+| Low cost per      | Poor graphics |
+| page              |               |
++-------------------+---------------+
+```
+### Dot-matrix printer head 
+- Moves back and forth
+    - Pins hit ribbon and paper
+### Printer ribbon 
+- Fabric
+    - One long ribbon
+    - Never ending circle
+- Easy to replace
+    - Once single unit
+- Proprietary size
+    - Specific to printer model 
+### Tractor feed 
+- Continuous paper feed
+    - Perforations between pages
+- Paper pulled through with holes on the side of the paper
+    - Instead of using friction
+- Holes have to line up perfectly
+    - Tractor paper can be perforated to remove holes
+## Impact Printer Maintenance 3.7
+### Printer Ribbon Replacement 
+- Single ribbon
+    - Self-contained
+    - One long circle
+- Replace when ink becomes too light
+    - Ink is eventually consumed
+- Designed to be modular
+    - Replace in less than a minute
+### Print head replacement 
+- Takes a lot of abuse
+    - Directly hits the ribbon and paper
+- Gets hot
+    - Watch your fingers
+- Another modular part
+    - Look for a release lever or bar
+- Replace with the ribbon for the best effect
+    - The output should look perfect
+### Replacing Paper 
+- Not as easy as a laser printer
+    - Paper must feed perfectly into holes
+        - Tractor feed
+- Forms must be positioned correctly
+    - Text needs to fit a predefined space
+- Paper must feed without constraint
+    - Make sure nothing is in the way 
