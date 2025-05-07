@@ -74,8 +74,8 @@
 
 ### Debian/Ubuntu (`apt`)
 
-| Command                     | Description               |
-|-----------------------------|---------------------------|
+| Command                      | Description               |
+|------------------------------|---------------------------|
 | `sudo apt update`           | Update package list       |
 | `sudo apt upgrade`          | Upgrade packages          |
 | `sudo apt install [pkg]`    | Install package           |
@@ -83,10 +83,22 @@
 
 ### Red Hat/CentOS (`yum`, `dnf`)
 
-| Command                     | Description               |
-|-----------------------------|---------------------------|
+| Command                      | Description               |
+|------------------------------|---------------------------|
 | `sudo yum install [pkg]`    | Install package           |
 | `sudo dnf upgrade`          | Upgrade packages          |
+
+### Arch Linux (`pacman`)
+
+| Command                          | Description                     |
+|----------------------------------|---------------------------------|
+| `sudo pacman -Syu`               | Update package list & upgrade  |
+| `sudo pacman -S [pkg]`           | Install package                 |
+| `sudo pacman -R [pkg]`           | Remove package                  |
+| `sudo pacman -Ss [keyword]`      | Search package                  |
+| `sudo pacman -Qi [pkg]`          | Info about installed package    |
+| `sudo pacman -Qs [pkg]`          | Search in installed packages    |
+| `sudo pacman -Sc`                | Clean unused packages/cache     |
 
 ---
 
@@ -103,8 +115,8 @@
 
 ## 👤 User Management
 
-| Command                            | Description                  |
-|------------------------------------|------------------------------|
+| Command                             | Description                  |
+|-------------------------------------|------------------------------|
 | `adduser [name]`                   | Add user                     |
 | `passwd [name]`                    | Change password              |
 | `deluser [name]`                   | Remove user                  |
@@ -114,7 +126,7 @@
 
 ## ⚙️ System Information
 
-| Command          | Description                   |
+| Command         | Description                    |
 |------------------|-------------------------------|
 | `uname -a`       | Kernel info                   |
 | `uptime`         | System uptime                 |
@@ -122,4 +134,3 @@
 | `id`             | User ID and groups            |
 | `free -h`        | RAM usage                     |
 | `hostname`       | System hostname               |
-
