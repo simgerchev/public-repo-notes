@@ -3358,7 +3358,7 @@ x4 Lanes      || || || ||
 +----------------+ Networking     | Networking     | Networking     |
 +===================================================================+
 ```
-## Cloud Characteristics 
+## Cloud Characteristics 4.1
 ### Shared resources 
 - Internal cloud
     - No resources are shared
@@ -3399,3 +3399,729 @@ x4 Lanes      || || || ||
 - Network connectivity
     - Big network requirement
     - Everything happens across the wire 
+## Client-side Virtualization 4.2 
+### Virtualization 
+- One computer, many operating systems
+    - macOS, Windows 11, Linux Ubuntu, all at the same time!
+- Seperate OS, independent CPU, memory, network, etc.
+    - But really one computer
+- Host-based virtualization
+    - Your normal desktop plus others
+- Standalone server that hosts virtual machines
+    - Enterprise-level
+- Been around since 1967
+    - IBM mainframe virtualization
+### Legacy software and operating systems 
+- Need to run different application versions on the same system
+    - Run each application instance in a seperate VM
+- Application only runs on a previous OS version
+    - Create a VM with the older operating system
+### Cross-platform virtualization 
+- Windows / macOS / Linux doesn't do everything
+    - Each OS has strengths and weaknesses
+- Run different operating systems at the same time
+    - Move between each OS seamlessly
+    - No rebooting
+- Save time and resources
+    - One physical computer
+### The hypervisor 
+- Virtual Machine Manager
+    - Manages the virtual platform and guest operating systems
+- May require a CPU that supports virtualization
+    - Can improve performance
+- Hardware management
+    - CPU
+    - Networking
+    - Security
+### Resource requirements 
+- CPU Processor Support
+    - Intel: Virtualization Technology (VT)
+    - AMD: AMD-V
+- Memory
+    - Above and beyond host OS requirements
+- Disk space
+    - Each gues OS has it's own image
+- Network
+    - Configurable on each guest OS (standalone, NAT, bridged, etc.)
+    - Virtual switch
+### Sandboxing 
+- Isolated testing environment
+    - No connection to the real world or production system
+    - A technological safe space
+- Virtualize development process
+    - Try some code, break some code, nobody gets hurt
+- Additional development features
+    - Roll back to a previous snapshot
+    - Run additional systems
+### Building the application 
+- Develop
+    - Secure environment
+    - Writing code
+    - Developers test in their sandboxes
+- Test
+    - A seperate virtual environment for testing
+    - Still in the development stage
+    - All of the pieces are put together
+    - Does it all work?
+### Hypervisor security 
+- Hypervisor is a sweet spot for the bad guys
+    - No significant vulnerabilities yet
+- VM escaping
+    - Malware recognizes it's on a virtual machine
+    - Malware compromises the hypervisor
+    - Malware jumps from one guest OS to another
+- Many hosted services are virtual environments
+    - Malware on one customer's server can gather information from another
+### Guest operating system security 
+- Every guest is self-contained
+    - Like a real computer
+- Use traditional security controls
+    - Host-based firewall
+    - Anti-virus, anti-spyware
+- Watch out for rogue virtual machines (VMs)
+    - The bad guys try to install their own system
+        - You're in big trouble
+- Self-contained VMs provided by 3rd parties can be dangerous
+    - You have no idea what's running on there
+### Network requirements
+- Most client-side virtual machine managers have their own virtual (internal) networks
+- Shared network address
+    - The virtual machine shares the same IP address as the physical host
+    - Uses a private IP address internally
+    - Uses NAT to convert to the physical host IP
+- Bridged network address
+    - The VM is a device on the physical network
+- Private address
+    - The VM doesn't communicate outside of the virtual network
+## How to Troubleshoot 5.1 
+### Change management 
+- Change control
+    - A formal process for managing change
+    - Avoid downtime, confusion and mistakes
+    - Corporate policy and procedures
+- Nothing changes without the process
+    - Plan for a change
+    - Estimate the risk associated with the change
+    - Have a recovery plan if the change doesn't work
+    - Test before making the change
+    - Document all of this and get approval
+    - Make the change
+### Identify the problem 
+- Information gathering
+    - Get as many details as possible
+    - Duplicate the issue, if posisble
+- Idenfity symptoms
+    - May be more than a single symptom
+- Question users
+    - Your best source of details
+- Determine if anything has changed
+    - Who's in the wiring closet?
+- Approach multiple problems individually
+- Backup everything
+    - You are going to make smoe changes
+    - You should always have a rollback plan
+- What else has changed ?
+    - The user may not be aware
+    - Environmental changes
+    - Infrastructure changes
+- There may be some clues
+    - Check OS log files
+    - Applications may have log information
+### Establish a theory 
+- Start with the obvious
+    - Occam's razor applies
+- Consider everything
+    - Even the not-so-obvious
+- Make a list of all possible causes
+    - Start with the easy theories
+    - And the least difficult to test
+- Research the symptoms
+    - Internal knowledgebase
+    - Google searches
+### Test the Theory
+- Confirm the theory
+    - Determine next steps to resolve problem
+- Theory didn't work?
+    - Re-establish new theory or escalate
+    - Call an expert
+- The theory worked!
+    - Make a plan
+### Create a plan of action 
+- Build the plan
+    - Correct the issue with a minimum of impact
+- Refer to vendor instructions
+    - Knowledge base, support articles
+    - Documentation and manuals
+- Identify potential effects
+    - Every plan can go bad
+    - Have a plan B
+    - And a plan C
+### Implement the solution 
+- Fix the issue
+    - Implement during the change control window
+- Escalate as necessary
+    - You may need help from a 3rd party
+### Verify full system functionality 
+- It's not fixed until it's really fixed
+    - The test should be part of your plan
+    - Have your customer confirm the fix
+- Implement preventative measures
+    - Let's avoid this issue in the future
+### Document findings 
+- It's not over until you build the knowledge base
+    - Don't lose valuable knowledge!
+- What action did you take?
+    - What outcome did it have?
+- Consider a formal database
+    - Help desk case notes
+    - Searchable database
+## Troubleshoot Common Hardware Problems 5.2 
+### POST (Power on Self Test) 
+- Test major system components before booting the operating system
+    - Main systems (CPU, CMOS, etc.)
+    - Video
+    - Memory
+- Failures are usually noted with beeps and/or codes
+    - BIOS versions can differ, check your documentation
+- Don't bother memorizing the beep codes
+    - They are all different between manufacturers
+    - Know what to do when you hear them
+### POST and boot 
+- Blank screen on boot
+    - Listen for beeps
+    - Bad video, bad RAM, bad CPU
+    - BIOS configuration issue
+- BIOS time and setting
+    - Maintained with the motherboard battery
+    - Replace the battery
+- Attempts to boot to incorrect device
+    - Set boot order in BIOS configuration
+    - Confirm that the startup device has a valid operating system
+    - Check for media in a startup device
+### Crash screens 
+- Windows stop error
+- Blue Screen of Death
+    - You don't want this
+- Contains important information
+    - Also written to event log
+- Useful when tracking down problems
+    - Sometimes more useful for manufacturer support
+### Bluescreens and spontaneous shutdowns 
+- Startup and shutdown BSOD
+    - Bad hardware, bad drivers, bad application
+- Use Last Known Good, System Restore, or Rollback Driver
+    - Try Safe Mode
+- Reseat or remove the hardware
+    - If possible
+- Run hardware diagnostics
+    - Provided by the manufacturer
+    - BIOS may have hardware diagnostics
+### The spinning ball of death 
+- The macOS X Spinning Wait Cursor
+    - Feedback that something is happening
+- The spin starts, but it never stops
+    - You never get back control of your computer
+- Many possible reasons
+    - Application bug
+    - Bad hardware
+    - Slow paging to disk
+- Restart the computer
+    - There may be details in the console logs
+### Black Screen 
+- Is the monitor connected?
+    - We wouldn't ask if it wasn't a common solution
+    - Check both power and signal cable
+- Input selection on monitor
+    - HDMI, DVI, VGA, etc.
+- Image is dim
+    - Check brightness controls
+- Swap the monitor
+    - Try the monitor on another computer
+- No video after windows loads
+    - Use VGA mode (F8)
+### No power 
+- No power
+    - No power at the source
+    - No power from the power supply
+    - Get out your multimeter
+- Fans spin - no power to other devices
+    - Where is your fan power connected?
+    - No POST - bad motherboard?
+    - Case fans have lower voltage requirements
+    - Check the power supply output
+### Sluggish performance 
+- Task Manager
+    - Check for high CPU utilization and I/O
+- Windows Update
+    - Latest patches and drivers
+- Disk space
+    - Check for available space and defrag
+- Laptops may be using power-saving mode
+    - Throttles the CPU
+- Anti-virus and anti-malware
+    - Scan for bad guys
+### Overheating 
+- Heat generation
+    - CPUs, video adapters, memory
+- Cooling systems
+    - Fans and airflow
+    - Heat sinks
+    - Clean and clear
+- Verify with monitoring software
+    - Built into the BIOS
+    - Try HWMonitor
+        - www.cpuid.com
+### Smoke and burning smell 
+- Electrical problems
+    - The smoke makes everything work
+- Always disconnect power
+    - There should never be a burned odor
+- Locate bad components
+    - Even after the system has cooled down
+    - Replace all damaged components
+### Intermittent shutdown 
+- No warning, black screen
+    - May have some details in your Event Viewer
+- Heat-related issue
+    - High CPU or graphics, gaming
+    - Check all fans and heat sinks
+    - BIOS may show fan status and temperatures
+- Failing hardware
+    - Has anything changed?
+    - Check Device Manager, run diagnostics
+- Could be anything
+    - Eliminate what's working
+### Application crashes 
+- Application stops working
+    - May provide an error message
+    - May just disappear
+- Check the Event Log
+    - Often includes useful reconnaissance
+- Check the Reliability Monitor
+    - A history of application problems
+    - Checks for resolutions
+- Reinstall the application
+    - Contact application support
+### Grinding noises 
+- Computers should hum
+    - Not grind
+- Rattling
+    - Loose components
+- Scraping
+    - Hard drive issues
+- Clicking
+    - Fan problems
+- Pop
+    - Blown capacitor
+### Lockups 
+- System completely stops
+    - Completely. Usually not much in the event log
+    - Similar to unexpected shutdowns
+- Check for any activity
+    - Hard drive, status lights, try Ctrl-Alt-Del
+- Update drivers and software patches
+    - Has this been done recently?
+- Low resources
+    - RAM, storage
+- Hardware diagnostics may be helpful
+### Continuous reboots 
+- How far does the boot go before rebooting?
+    - BIOS only? OS splash screen?
+- Bad driver or configuration
+    - F8, "Boot from last known working configuration"
+- Try F8, Safe Mode
+    - If system starts, disable automatic restarts in System Properties
+- Bad hardware
+    - Try removing or replacing devices
+### Inaccurate system date/time 
+- Bad motherboard battery
+    - Often a "button" style battery
+- A bad battery will require a BIOS configuration on every boot
+- On older systems, can reset the BIOS configuration by removing the battery
+    - newer computers use a jumper
+## Troubleshooting Storage Devices 5.3 
+### Storage failure symptoms 
+- Read/write failure
+    - "Cannot read from the source disk"
+- Slow performance
+    - Constant LED activity
+    - Retry...retry...retry
+- Loud clicking noise
+    - The cick of death
+    - May also include grinding and scraping
+### Troubleshooting disk failures 
+- Get a backup
+    - First thing - a bad drive is bad
+- Check for loose or damaged cables
+- Check for overheating
+    - Especially if problems occur after startup
+### Check power supply   
+- Especially if new devices were added
+### Run hard drive diagnostics    
+- From the drive or computer manufacturer
+- Preferably on a known-good computer
+### Boot failure symptoms 
+- Drive not recognized, Boot Device Not Found
+    - Lights (or not lights)
+    - Beeps
+    - Error messages
+- Operating system not found
+    - The drive is there
+    - Windows is not
+### Troubleshooting boot failures 
+- Check your cables
+    - Physical problem
+- Check boot sequence in BIOS
+    - Check for removable disks (especially USB)
+    - Check for disabled storage interfaces
+- For new installation, check hardware configuration
+    - Data and power cables
+    - Try different SATA interfaces
+- Try the drive in a different computer
+### Data loss/corruption 
+- Hard drives are mechanical devices
+    - They will eventually fail
+- Repairs are difficult and expensive
+    - Dust-free environment
+    - Not always successful
+- An SSD may simply stop working
+    - Sometimes can read but not write
+- Data becomes unavailable or corrupted
+    - Can be impossible to recover
+- Always have a backup
+### RAID not found 
+- Missing or faulty RAID controller
+### RAID stops working 
+- Each RAID is different
+    - Don't start pulling drives until you check the console !
+### RAID recovery 
+- Each RAID is different
+    - Don't start pulling drives until you check the console !
+```
++======================================================================================+
+| RAID       | Disks Required | Failure Condition                                      |
++======================================================================================+
+| RAID 0     | 2 or more      | A single drive failure breaks the array with data loss | 
++------------+----------------+--------------------------------------------------------+
+| RAID 1     | 2 or more      | Array will work as long as one drive is operational    | 
++------------+----------------+--------------------------------------------------------+
+| RAID 5     | 3 or more      | Need all drives operational but one                    | 
++------------+----------------+--------------------------------------------------------+ 
+| RAID 10    | 4 or more      | Can lose all but one from each set of mirrors          | 
+| RAID (1+0) |                |                                                        |
++======================================================================================+  
+```
+### S.M.A.R.T
+- Self-Monitoring, Analysis, and Reporting Technology
+    - Use third-party utilities
+- Avoid hardware failure
+    - Look for warning signs
+- Schedule disk checks
+    - Built-in to most drive arrays
+- Warning signs
+    - Replace a drive
+### Extended read/write times 
+- A lot happens when reading or writing data
+    - Memory access, communication across the bus, spinning drive access, writing or reading the data to the storage device, etc.
+- Delays can occur anywhere along the way
+    - Need a way to measure storage device access
+- Input/output operations per second (IOPS)
+    - A broad metric of maximum performance
+- Useful for comparing storage devices
+    - Hard drive: 200 IOPS
+    - SSD: 1,000,000 IOPS
+### Missing drives in OS 
+- OS boots normally
+    - Other drives not shown
+    - Check the BIOS
+- Internal drives
+    - Bad drive or disconnected cable
+- External drives
+    - No power to the drive or bad cable connection
+- Network shares
+    - Shared drives can be connected during startup
+    - Option to reconnect at sign-in
+    - Connected with login script
+## Troubleshooting Video and Display Issues 5.4 
+### No video image 
+- Is it connected?
+    - We wouldn't ask if it wasn't a real solution
+    - Check both power and signal cable
+- Input selection on monitor
+    - HDMI, DVI, VGA, etc.
+- Image is dim
+    - Check brightness controls
+- Swap the monitor
+    - Try the monitor on another computer
+- No video after Windows loads
+    - Use VGA mode (F8)
+### Image quality problems 
+- Flickering, color patterns incorrect
+    - You can almost work with this
+- Check the cable pins
+    - Especially if missing a color
+- Distorted image and geometry
+    - Check the OS refresh rate and resolution settings
+    - Need to match the display specifications
+    - Check or replace cable
+- Disable hardware acceleration
+    - Troubleshoot with the software drivers
+### Native resolution 
+- An LCD display is fixed
+    - The number of pixels doesn't change
+- A display looks best when the video settings match a display's native resolution
+    - A mismatch can cause distortion
+- If changing the display resolution, try using a multiple of the native resolution
+    - 2560 x 1600 is the same ratio as 1920 x 1200
+### Burn-in 
+- A problem across all monitor types
+    - Some displays will pixel-shift
+    - You probably won't notice it
+- LCDs have "image stickering"
+    - Try to remove by displaying a white screen for an extended period
+### Dead pixels 
+- Always black
+    - A manufacturing defect
+- This probably isn't a problem on your side
+    - Not a cable or power issue
+- Clean the monitor screen
+    - Damp cloth
+- You'll have to replace the monitor
+    - No other option
+### Flashing screen 
+- Check the video cable connections
+    - A loose cable will cause loss of signal
+- Replace the video cable
+    - Usually a quick fix
+- The problem could be with the monitor
+    - Try switching the display
+- Confirm the display settings in the operating system
+    - May not match the monitor
+### Incorrect color display 
+- Colors may not be properly represented
+    - Too much red, green, blue, yellow, etc.
+- Monitor settings
+    - Tint
+    - Custom color presets
+    - Factory Reset
+- Driver configuration
+    - Color tint
+- OS configuration - Very blue
+    - Night light settings
+### Audio issues 
+- Many monitors include speakers
+    - No sound, low volume
+- Monitor may have audio controls
+    - Check volume levels and mute status
+- Confirm audio input over HDMI, DisplayPort, or Thunderbolt
+    - Check the HDMI audio output in the OS
+- The monitor may support other audio input interfaces
+    - Check for audio jacks
+### Dim image 
+- Monitor video settings
+    - Brightness
+    - Contrast
+- Check the OS
+    - Auto-dimming
+    - Dim on battery power
+    - Driver settings
+- Backlight failure
+    - Some or all of the light
+    - May only be a section of the screen
+### LCD projector troubleshooting 
+- Large screen projection
+    - Conference rooms, large gatherings
+- Not always LCD
+    - But common to see LCD
+- Metal-halide lamp
+    - Very bright (very hot) light
+    - Relatively expensive
+    - (˜$35 to $350+ US)
+- Always let bulbs cool
+    - Fan will run after shutting off
+    - Keep it plugged in
+### LCD projector troubleshooting 
+- Intermittent projector shutdown
+    - No light output
+    - Fans may continue to run
+- Cooling issue
+    - Fans constantly cool the bulb
+    - Shuts down if temperatures are high
+- Check the airflow
+    - Remove any blockages
+    - Clean dust from the air filters and external air input/output
+## Troubleshooting Mobile Devices 5.5 
+### Poor battery health 
+- Replace aging battery
+    - There's only so many recharges
+- Bad reception
+    - Always searching for signal
+    - Airplane mode on the ground
+- Disable unnecessary features
+    - 802.11 wireless, Bluetooth, GPS
+- Check application battery usage
+    - iOS and iPadOS: Settings/Battery
+    - Android: Settings/Battery
+### Swollen battery 
+- Buildup of gas
+    - Designed to self-contain
+    - Do not open the battery packet/container
+        - Significant fire risk
+        - You will be sorry
+- Faulty battery
+    - Stop using immediately
+    - Dispose of properly
+- Device can be damaged
+    - Better than having a fire
+### Broken screen 
+- Time for a backup
+    - Do this first
+- Replace the screen
+    - No easy fixes
+- The glass is sharp
+    - Screen protectors can help
+    - Use clear tape until repaired
+### Improper charging 
+- Check everything in the charging process
+    - Cables, interfaces
+- Check the cable interface
+    - Remove any obstructions
+- Check the cable
+    - Don't use frayed or damaged cables
+    - Try a known-good cable
+- Verify the power adapter
+    - Check with a multimeter
+### Poor or no connectivity 
+- Cellular or Wi-Fi
+    - Location
+- Cellular
+    - Signal strength
+    - Location matters
+    - Outdoor connectivity may be better
+- Wi-Fi
+    - Limited range
+    - Interference can limit throughput
+    - May need a channel/frequency configuration change
+### Liquid damage 
+- Many phones have a Liquid Contact Indicator (LCI)
+    - Turns color when liquid has been present
+- Power down the phone
+    - Don't power it back on. Don't do it.
+- Remove the case, cards, back, and battery
+    - If possible
+- Putting the phone in a bag of rice doesn't actually work very well
+    - Silica gel is better
+- Leave it alone
+    - Don't turn it on
+    - Do not charge the phone
+    - Don't connect it to power
+    - Don't press any keys
+    - Don't heat the phone
+    - Don't move it around
+- Wait at least a day
+    - Or until the phone appears to be dry
+    - And then perhaps a few hours after that
+- Once you're sure, power it on
+    - Hope for the best
+### Overheating 
+- Phone will automatically shut down
+    - Avoid overheating damage
+- Charging/discharging the battery, CPU usage, display light
+    - All of these create heat
+- Check app usage
+    - Some apps can use a lot of CPU
+- Avoid direct sunlight
+    - Quickly overheats
+### Digitizer issues 
+- Touchscreen completely black or not responding to input
+    - Screen presses do not register
+- Apple iOS reset
+    - Press power button, slide to power off, press power button
+    - Hold down power button and Home | Volume for 10 seconds
+- Android device restart
+    - Remove battery, put back in, power on
+    - Hold down power and volume down until restart
+        - Some phones have different key combinations
+        - Some phones do not have a key-based reset
+### Physically damaged ports 
+- External interface
+    - Charging and data transfer
+- Rough handling and accidents
+    - Damages the interface
+- Not charging
+    - Look closely
+- Not modular
+    - Requires a system board replacement
+### Malware 
+- Always a concern
+    - Even on mobile devices
+    - The device type doesn't matter
+- Look for symptoms
+    - Unusual apps
+    - Large data transfers
+    - Pop up messages
+    - High CPU usage, device overheating
+    - Excessive battery use
+- Try a security app or scanner
+    - Identify malware infections
+### Cursor drift 
+- Random input or cursor moves without touching the device
+    - Common on older screens
+- Use a touch calibration app
+    - Requires user input
+    - Touch certain areas of the screen
+- The system will adjust to the new calibration parameters
+    - No more drift
+## Troubleshooting Printers 5.6 
+### Testing the Printer 
+- Print or scan a test page
+    - Built into Windows
+    - Not the application
+- Use diagnostic tools
+    - Web-based utilities built into the printer
+    - Vendor specific
+    - Generic utilities
+### Bad output 
+- Lines down the printed page
+    - Inkjet: Clean print heads
+    - Laser: Check for scratched photosensitive drum
+- Faded prints, blank pages
+    - Low toner or ink
+- Double/echo images or speckling
+    - Laser printer optical drum not cleaned properly
+    - Ghost or "shadow" from previous drum rotation
+### Garbled print 
+- Bad printer driver / wrong model
+    - Incorrect page description language ( PCL or PostScript? )
+- Verify the printer functionality
+    - Check with a test page
+- Bad application
+    - Check the output
+    - Upgrade the application
+### Toner not sticking to the paper 
+- Laser printer output smudges everywhere
+    - Toner sticks to everything
+- Toner not fused to the paper
+    - Toner should be permanently melted and pressed
+    - May not be hot
+- Fuser problem
+    - Replace the fuser assembly
+### Incorrect paper size 
+- Print a letter size page
+    - Accidentally send it to a legal size paper tray
+- Printer stops and shows a message
+    - Gives you a chance to fix the issue
+- Tray selection is provided during the printing process
+    - Try printing again
+    - Change the defaults in the printer configuration
+### Paper jam 
+- Careful when removing
+    - Don't rip the paper
+    - Don't damage internal components
+- Paper not feeding or misfeeds multiple pages
+    - Check the tray
+    - Pickup rollers are part of a laser printer maintenance kit
+- Creased paper
+    - Problems in the paper path
+    - Check the paper weight
+### Multiple prints pending in queue
