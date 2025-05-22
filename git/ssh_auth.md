@@ -1,11 +1,11 @@
 
-# 🔐 GitHub SSH Authentication Guide
+#  GitHub SSH Authentication Guide
 
 This guide walks you through setting up SSH login for GitHub — no more typing your username and password every time you push!
 
 ---
 
-## ✅ 1. Generate an SSH Key
+##  1. Generate an SSH Key
 
 If you don't already have an SSH key, generate one:
 
@@ -18,7 +18,7 @@ ssh-keygen -t ed25519 -C "your-email@example.com"
 
 ---
 
-## ✅ 2. Start the SSH Agent and Add Your Key
+##  2. Start the SSH Agent and Add Your Key
 
 Start the `ssh-agent`:
 
@@ -40,7 +40,7 @@ ssh-add ~/.ssh/githubssh
 
 ---
 
-## ✅ 3. Add the SSH Key to Your GitHub Account
+##  3. Add the SSH Key to Your GitHub Account
 
 Display your public key:
 
@@ -58,7 +58,7 @@ Copy the entire output, then:
 
 ---
 
-## ✅ 4. Configure Git to Use SSH
+##  4. Configure Git to Use SSH
 
 Update your Git remote to use the SSH format:
 
@@ -81,7 +81,7 @@ origin  git@github.com:your-username/your-repo.git (push)
 
 ---
 
-## ✅ 5. Test Your SSH Authentication
+##  5. Test Your SSH Authentication
 
 Run this command:
 
@@ -95,11 +95,11 @@ Expected output (after typing `yes` if prompted):
 Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-🎉 Success! You're logged in via SSH.
+ Success
 
 ---
 
-## 🛠 Optional: Set Permissions Properly
+##  Optional: Set Permissions Properly
 
 If you get a permissions error when adding your key:
 
@@ -110,7 +110,7 @@ chmod 700 ~/.ssh
 
 ---
 
-## ✅ Now You Can Use Git Normally
+##  Now You Can Use Git Normally
 
 Examples:
 
