@@ -5,7 +5,7 @@ When cloning a private repository from GitHub over HTTPS, you may be prompted fo
 
 ---
 
-## ✅ Option 1: Use a Personal Access Token (PAT)
+## Option 1: Use a Personal Access Token (PAT)
 
 1. Go to [GitHub Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens).
 2. Click **"Generate new token (classic)"**.
@@ -18,11 +18,11 @@ Then run:
 git clone https://<YOUR_USERNAME>:<YOUR_TOKEN>@github.com/pelasg0/private-notes.git
 ```
 
-> ⚠️ Do **not** share or commit this URL/token. It's as powerful as a password.
+> Do **not** share or commit this URL/token. It's as powerful as a password.
 
 ---
 
-## ✅ Option 2: Use SSH Instead of HTTPS (Recommended)
+## Option 2: Use SSH Instead of HTTPS (Recommended)
 
 1. Generate an SSH key (if you don’t have one already):
 
