@@ -6,15 +6,15 @@ To open an interactive shell (`sh`) session inside the running **React frontend 
 docker exec -it <container-name> sh/bash
 ```
 
-### Build the Image again
+### Build/Rebuild the Image
 
-To build the image again or rebuild it use this command:
+To build the image or rebuild it use this command:
 
 ```bash
 docker-compose build --no-cache
 ```
 
-### Build the Image again
+### Run the container
 
 To start all containers using the currently built image and the docker-compose file use this command:
 
