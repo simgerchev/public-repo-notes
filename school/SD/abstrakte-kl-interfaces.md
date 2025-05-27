@@ -10,6 +10,7 @@
 
 ### ➤ Java-Syntax
 ```java
+
 public abstract class Fahrzeug {
     protected String name;
 
@@ -23,6 +24,7 @@ public abstract class Fahrzeug {
 
     public abstract void fahren(); // Muss überschrieben werden
 }
+
 public class Auto extends Fahrzeug implements Beweglich {
 
     public Auto(String name) {
