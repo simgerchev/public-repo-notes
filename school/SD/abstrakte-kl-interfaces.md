@@ -23,6 +23,23 @@ public abstract class Fahrzeug {
 
     public abstract void fahren(); // Muss überschrieben werden
 }
+public class Auto extends Fahrzeug implements Beweglich {
+
+    public Auto(String name) {
+        super(name); // Konstruktor von Fahrzeug aufrufen
+    }
+
+    @Override
+    public void fahren() {
+        System.out.println(name + " fährt auf der Straße.");
+    }
+
+    @Override
+    public void bewegen() {
+        System.out.println(name + " bewegt sich vorwärts.");
+    }
+}
+
 ```
 
 ### ➤ Merkmale
@@ -53,9 +70,19 @@ public abstract class Fahrzeug {
 
 ### ➤ Java-Syntax
 ```java
+
 public interface Beweglich {
     void bewegen(); // public abstract ist implizit
 }
+
+public class Auto implements Beweglich {
+
+    @Override
+    public void bewegen() {
+        System.out.println("Das Auto fährt.");
+    }
+}
+
 ```
 
 ### ➤ Merkmale
