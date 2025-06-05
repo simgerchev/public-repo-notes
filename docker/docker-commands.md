@@ -26,6 +26,8 @@ docker-compose up
 
 ```bash
 docker-compose down --volumes --rmi all --remove-orphans
+
+docker system prune -a --volumes
 ```
 
 ### Prune unused Docker data
