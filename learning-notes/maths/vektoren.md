@@ -127,4 +127,23 @@ $d = \dfrac{|(\vec{p}_2 - \vec{p}_1) \cdot (\vec{r}_1 \times \vec{r}_2)|}{|\vec{
 
 ---
 
-**Viel Erfolg beim Lernen!**
+<!-- Ergänzung für vektoren.md, z.B. nach jedem Abschnitt oder als Zusatz am Ende -->
+
+---
+
+## Warum braucht man diese Gleichungen?
+
+- **Geradengleichungen:**  
+  Mit Geradengleichungen kann man Bewegungen, Wege oder Verbindungen zwischen zwei Punkten im Raum exakt beschreiben. Sie sind wichtig, um Schnittpunkte, Abstände oder Richtungen zu berechnen – z.B. bei der Navigation, in der Physik (Bewegungsbahnen) oder beim Konstruieren von Objekten.
+
+- **Ebenengleichungen:**  
+  Ebenengleichungen beschreiben Flächen im Raum, wie z.B. Wände, Böden oder Schnittflächen. Sie werden genutzt, um zu prüfen, ob ein Punkt auf einer Fläche liegt, wie zwei Flächen zueinander liegen (parallel, identisch, schneiden sich) oder um Schnittgeraden zu berechnen.
+
+- **Lagebeziehungen:**  
+  Mit diesen Methoden kann man herausfinden, wie Geraden und Ebenen zueinander liegen: Schneiden sie sich, verlaufen sie parallel oder haben sie keinen gemeinsamen Punkt? Das ist z.B. in der Technik, Architektur oder Informatik wichtig, wenn man wissen muss, ob sich Objekte berühren oder kreuzen.
+
+- **Abstandsformeln:**  
+  Sie helfen, den kürzesten Abstand zwischen Punkten, Geraden und Ebenen zu berechnen. Das ist praktisch, um z.B. Kollisionen zu vermeiden, Mindestabstände einzuhalten oder optimale Wege zu finden.
+
+**Kurz gesagt:**  
+Diese Gleichungen sind Werkzeuge, um geometrische Probleme im Raum exakt und rechnerisch zu lösen. Sie machen es möglich, komplexe Situationen mathematisch zu beschreiben und zu analysieren – überall dort, wo räumliche Beziehungen eine Rolle spielen.
