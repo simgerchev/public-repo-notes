@@ -123,3 +123,14 @@ git push origin main
 SSH will handle authentication behind the scenes.
 
 ---
+
+##  Clean untracked files and changes
+
+Examples:
+
+```bash
+git clean -fd
+```
+
+---
+
